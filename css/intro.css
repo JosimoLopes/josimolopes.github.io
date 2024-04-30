@@ -1,24 +1,24 @@
 .intro {
   display: grid;
-  max-width: 1300px;
   padding: 0;
-  margin: 50px auto;
 }
 
 .intro-grid {
+  max-width: 100vw !important;
+  height: 100vh !important;
   display: grid;
   margin: 0;
   padding: 0;
   grid-template-columns: 2fr 1fr 4fr;
   grid-template-rows: 1fr 2fr;
-  max-height: 90vh;
   position: relative;
-  outline: 4px solid #fff;
+  /* outline: 4px solid #fff; */
   transition: 0.7s;
+  overflow: hidden;
 }
 
 .intro-grid:hover {
-  background: #631d76;
+  background: #ce1483;
   outline: none;
 }
 
@@ -33,12 +33,13 @@
   grid-column: 2 / 4;
   text-transform: uppercase;
   font-weight: 900;
-  font-size: 160px;
-  line-height: 98px;
-  letter-spacing: -10px;
+  font-size: 172px;
+  line-height: 78px;
+  letter-spacing: -20px;
   text-wrap: wrap;
   animation: unshrink-title 1s forwards;
   color: #fff;
+  opacity: 0;
 }
 
 .intro-grid:hover > h1 {
@@ -48,7 +49,7 @@
 @keyframes unshrink-title {
   to {
     letter-spacing: 0;
-    line-height: 120px;
+    line-height: 126px;
     opacity: 1;
   }
 }
@@ -58,11 +59,11 @@
   grid-row: 1;
   text-transform: uppercase;
   font-weight: 900;
-  font-size: 78px;
+  font-size: 88px;
   text-wrap: nowrap;
   align-self: end;
-  justify-self: end;
   color: #fff;
+  line-height: 80px;
 }
 
 .intro-grid:hover > h2 {
@@ -75,7 +76,7 @@
   align-self: end;
   justify-self: end;
   text-align: end;
-  margin-bottom: -5px;
+  /* margin-bottom: -5px; */
   position: absolute;
   bottom: 0;
   right: 0;
@@ -83,10 +84,10 @@
 
 .intro-menu a {
   display: block;
-  font-size: 4rem;
+  font-size: 3.8rem;
   font-weight: 800;
   text-transform: uppercase;
-  line-height: 58px;
+  line-height: 50px;
   transition: 0.7s;
   animation: intro-menu-load 0.8s forwards;
   transform: scale(1.15);
@@ -95,7 +96,7 @@
 
 .intro-menu a:hover {
   transform: scale(1.1);
-  color: #631d76 !important;
+  color: #ce1483 !important;
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: #000;
   transform-origin: bottom;
@@ -133,6 +134,7 @@
 
 .intro-grid img {
   object-fit: cover;
+  height: 100%;
   transform: scale(0);
   animation: scale-load 1.3s forwards;
   transform-origin: left bottom;
