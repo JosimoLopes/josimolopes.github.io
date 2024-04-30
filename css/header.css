@@ -1,0 +1,39 @@
+.header {
+  max-width: 1260px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.header .logo {
+  color: transparent;
+  position: fixed;
+  margin: 0;
+  left: 50px;
+  top: 20px;
+  z-index: 10;
+  opacity: 1;
+  font-size: 2.8rem;
+  font-weight: 900;
+  line-height: 10px;
+  letter-spacing: -18px;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #631d76;
+  transition: 0.5s;
+  mix-blend-mode: difference;
+  animation: logo-unwrap 1s forwards;
+  opacity: 0;
+  /* animation-delay: 0.5s; */
+}
+
+.header .logo:hover {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff;
+}
+
+@keyframes logo-unwrap {
+  to {
+    line-height: 25px;
+    letter-spacing: -4px;
+    opacity: 1;
+  }
+}
