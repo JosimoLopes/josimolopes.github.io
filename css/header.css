@@ -7,33 +7,29 @@
 .header .logo {
   color: transparent;
   position: fixed;
-  margin: 0;
   left: 50px;
   top: 20px;
   z-index: 10;
-  opacity: 1;
-  font-size: 2.8rem;
+  font-size: 2rem;
   font-weight: 900;
-  line-height: 10px;
-  letter-spacing: -18px;
-  -webkit-text-stroke-width: 1px;
+  line-height: 18px;
+  letter-spacing: -4px;
+  -webkit-text-stroke-width: 0.8px;
   -webkit-text-stroke-color: #fff;
-  transition: 0.5s;
   mix-blend-mode: difference;
-  animation: logo-unwrap 1s forwards;
+  animation: logo-showup 1s forwards;
   opacity: 0;
   animation-delay: 1s;
+  transition: 0.5s;
 }
 
 .header .logo:hover {
-  -webkit-text-stroke-width: 3px;
-  -webkit-text-stroke-color: #631d76;
+  -webkit-text-stroke-width: 0;
+  color: #fff;
 }
 
-@keyframes logo-unwrap {
+@keyframes logo-showup {
   to {
-    line-height: 25px;
-    letter-spacing: -4px;
     opacity: 1;
   }
 }
@@ -69,17 +65,4 @@
     transform: scale(0.95);
     box-shadow: 0 0 0 0 rgba(77, 170, 87, 0);
   }
-}
-
-.header .logo::before {
-  content: "Available for work";
-  display: inline-block;
-  font-size: 0.9rem;
-  position: absolute;
-  top: -8px;
-  right: -135px;
-  color: #fff;
-  letter-spacing: 0;
-  font-weight: 500;
-  -webkit-text-stroke: 0;
 }
