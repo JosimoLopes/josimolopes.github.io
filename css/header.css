@@ -16,18 +16,18 @@
   font-weight: 900;
   line-height: 10px;
   letter-spacing: -18px;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #631d76;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff;
   transition: 0.5s;
   mix-blend-mode: difference;
   animation: logo-unwrap 1s forwards;
   opacity: 0;
-  /* animation-delay: 0.5s; */
+  animation-delay: 1s;
 }
 
 .header .logo:hover {
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #fff;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #631d76;
 }
 
 @keyframes logo-unwrap {
@@ -36,4 +36,50 @@
     letter-spacing: -4px;
     opacity: 1;
   }
+}
+
+.header .logo::after {
+  content: "";
+  display: inline-block;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: -7px;
+  background-color: #4daa57;
+  box-shadow: 0 0 0 0 rgb(77, 170, 87, 1);
+  transform: scale(1);
+  animation: pulse-green 2s infinite;
+  z-index: 15;
+}
+
+@keyframes pulse-green {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(77, 170, 87, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(77, 170, 87, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(77, 170, 87, 0);
+  }
+}
+
+.header .logo::before {
+  content: "Available for work";
+  display: inline-block;
+  font-size: 0.9rem;
+  position: absolute;
+  top: -8px;
+  right: -135px;
+  color: #fff;
+  letter-spacing: 0;
+  font-weight: 500;
+  -webkit-text-stroke: 0;
 }

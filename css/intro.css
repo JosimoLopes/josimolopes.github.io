@@ -11,8 +11,15 @@
   padding: 0;
   grid-template-columns: 2fr 1fr 4fr;
   grid-template-rows: 0.1fr 1fr 1fr 1fr;
-  background: #631d76;
   max-height: 90vh;
+  position: relative;
+  outline: 4px solid #fff;
+  transition: 0.7s;
+}
+
+.intro-grid:hover {
+  background: #631d76;
+  outline: none;
 }
 
 @media (width > 1350px) {
@@ -27,19 +34,39 @@
   text-transform: uppercase;
   font-weight: 900;
   font-size: 140px;
-  line-height: 104px;
+  line-height: 98px;
+  letter-spacing: -10px;
   text-wrap: wrap;
+  animation: unshrink-title 1s forwards;
+  color: #fff;
+}
+
+.intro-grid:hover > h1 {
+  color: #000;
+}
+
+@keyframes unshrink-title {
+  to {
+    letter-spacing: 0;
+    line-height: 104px;
+    opacity: 1;
+  }
 }
 
 .intro-grid h2 {
   grid-column: 1 / 3;
   grid-row: 2 / 3;
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: 900;
   font-size: 78px;
   text-wrap: nowrap;
   align-self: end;
   justify-self: end;
+  color: #fff;
+}
+
+.intro-grid:hover > h2 {
+  color: #000;
 }
 
 .intro-menu {
@@ -49,24 +76,52 @@
   justify-self: end;
   text-align: end;
   margin-bottom: -5px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .intro-menu a {
   display: block;
   font-size: 4.5rem;
-  color: #000;
   font-weight: 800;
   text-transform: uppercase;
   line-height: 58px;
-  transition: 0.5s;
+  transition: 0.7s;
+  animation: intro-menu-load 0.8s forwards;
+  transform: scale(1.15);
+  color: #fff;
 }
 
 .intro-menu a:hover {
-  transform: scale(1.05);
-  color: transparent;
-  -webkit-text-stroke-width: 2px;
+  transform: scale(1.1);
+  color: #631d76 !important;
+  -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: #000;
   transform-origin: bottom;
+  animation: none;
+}
+
+.intro-grid:hover > .intro-menu a {
+  color: #000;
+}
+
+.intro-menu li:nth-child(1) a {
+  animation-delay: 0s;
+}
+
+.intro-menu li:nth-child(2) a {
+  animation-delay: 0.2s;
+}
+
+.intro-menu li:nth-child(3) a {
+  animation-delay: 0.4s;
+}
+
+@keyframes intro-menu-load {
+  to {
+    transform: scale(1) translateY(0px);
+  }
 }
 
 .intro-grid .intro-img-container {
@@ -80,7 +135,6 @@
 
 .intro-grid img {
   object-fit: cover;
-  /* opacity: 0; */
   transform: scale(0);
   animation: scale-load 1.3s forwards;
   transform-origin: left bottom;
@@ -92,7 +146,3 @@
     transform: scale(1);
   }
 }
-
-/* .intro-grid .intro-img-container:hover > img {
-  opacity: 1;
-} */
