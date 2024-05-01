@@ -1,0 +1,14 @@
+.cursor {
+  width: 1rem;
+  height: 1rem;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  display: none;
+}
+
+.cursor.active {
+  display: block;
+}
