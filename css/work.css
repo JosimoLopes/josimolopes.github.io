@@ -1,3 +1,7 @@
+.work {
+  margin-top: 160px;
+}
+
 .work-marquee {
   display: flex;
   align-items: center;
@@ -7,25 +11,40 @@
 .work-box {
   overflow: hidden;
   white-space: nowrap;
+  padding-top: 1rem;
+  position: relative;
+  margin-bottom: 48px;
 }
 
-.work-box h2 {
+.work-box [data-anima="marquee"] {
   color: #fff;
-  font-size: 10rem;
+  font-size: 8rem;
   text-transform: uppercase;
   font-weight: 800;
-  position: relative;
   display: inline-block;
   margin: 0;
-  padding: 0 15%;
+  padding: 0 5%;
   will-change: transform;
+  line-height: 130px;
+  transition: 0.5s;
 }
 
-.work-box h2:hover {
+.work-box [data-anima="marquee"]:hover {
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #fff;
+  color: transparent;
 }
 
-/* 
 .work-box span {
   color: #fff;
   position: absolute;
-} */
+  left: 5%;
+  top: 0;
+  font-weight: 600;
+  transition: 0.5s;
+  z-index: 5;
+}
+
+.work-box span:hover {
+  color: #999;
+}

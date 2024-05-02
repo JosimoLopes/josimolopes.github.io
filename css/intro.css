@@ -101,12 +101,9 @@
 }
 
 .intro-menu a:hover {
-  transform: scale(1.1);
   color: #ce1483 !important;
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: #000;
-  transform-origin: bottom;
-  animation: none;
 }
 
 .intro-grid:hover > .intro-menu a {

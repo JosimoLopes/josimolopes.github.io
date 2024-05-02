@@ -22,63 +22,56 @@ function initCursor() {
 
 initCursor();
 
-const el = document.querySelector("[data-anima='marquee'");
+function initMarquee() {
+  const elements = document.querySelectorAll("[data-anima='marquee']");
 
-// Variables ~ Widths
-let elWidth = el.offsetWidth;
-let windowWidth = window.innerWidth;
+  let windowWidth = window.innerWidth;
+  let mouseX = 0;
+  let translateTargets = [];
+  let translateWithEasings = [];
+  const translateEasingFactor = 0.2;
+  let isHovering = [];
 
-// Variables ~ Mouse
-let mouseX = 0;
-let prevMouseX = 0;
+  window.addEventListener("mousemove", handleMouseMove);
+  window.addEventListener("resize", handleWindowResize);
 
-// Target: value we want to animate to
-let translateTarget = 0;
+  function handleMouseMove(e) {
+    mouseX = e.pageX;
+  }
 
-// WithEasing: value we use to animate
-let translateWithEasing = 0;
+  function handleWindowResize(e) {
+    windowWidth = window.innerWidth;
+  }
 
-// EasingFactor: determines how quick the animation/interpolation goes
-let translateEasingFactor = 0.02;
+  function lerp(start, end, factor) {
+    return (1 - factor) * start + factor * end;
+  }
 
-// Events
-window.addEventListener("mousemove", handleMouseMove);
-window.addEventListener("resize", handleWindowResize);
+  function animateElement(el, index) {
+    if (isHovering[index]) {
+      const elWidth = el.offsetWidth;
 
-// Functions
-function handleMouseMove(e) {
-  mouseX = e.pageX;
+      translateTargets[index] = ((elWidth - windowWidth) / windowWidth) * mouseX * -1;
+
+      translateWithEasings[index] = lerp(translateWithEasings[index] || 0, translateTargets[index], translateEasingFactor);
+
+      el.style.transform = `translateX(${translateWithEasings[index]}px)`;
+    }
+
+    window.requestAnimationFrame(() => animateElement(el, index));
+  }
+
+  elements.forEach((el, index) => {
+    el.addEventListener("mouseenter", () => {
+      isHovering[index] = true;
+    });
+
+    el.addEventListener("mouseleave", () => {
+      isHovering[index] = false;
+    });
+
+    window.requestAnimationFrame(() => animateElement(el, index));
+  });
 }
 
-function handleWindowResize(e) {
-  elWidth = el.offsetWidth;
-  windowWidth = window.innerWidth;
-}
-
-function lerp(start, end, factor) {
-  return (1 - factor) * start + factor * end;
-}
-
-function animateMe() {
-  // Get difference between current and previous mouse position
-  prevMouseX = mouseX;
-
-  // Calc how much we need to translate our el
-  translateTarget = ((elWidth - windowWidth) / windowWidth) * mouseX * -1;
-
-  // Ease between start and target values (skew)
-
-  // Limit our skew to a range of 75 degrees so it doesn't "over-skew"
-
-  // Ease between start and target values (translate)
-  translateWithEasing = lerp(translateWithEasing, translateTarget, translateEasingFactor);
-
-  el.style.transform = `
-    translateX(${translateWithEasing}px)
-  `;
-
-  // RAF
-  window.requestAnimationFrame(animateMe);
-}
-
-window.requestAnimationFrame(animateMe);
+initMarquee();
