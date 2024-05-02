@@ -4,8 +4,8 @@
 }
 
 .intro-grid {
-  min-width: 100vw;
-  height: 100vh;
+  max-width: 100vw !important;
+  min-height: 100vh !important;
   display: grid;
   margin: 0;
   padding: 0;
@@ -29,7 +29,7 @@
   font-size: 172px;
   line-height: 126px;
   text-wrap: wrap;
-  animation: unshrink-title 1s ease-in-out forwards;
+  animation: unwrap-title 1s ease-in-out forwards;
   color: #fff;
 }
 
@@ -37,7 +37,7 @@
   color: #000;
 }
 
-@keyframes unshrink-title {
+@keyframes unwrap-title {
   0% {
     letter-spacing: -15px;
     opacity: 0;
@@ -83,7 +83,9 @@
   text-align: end;
   /* margin-bottom: -5px; */
   position: absolute;
-  inset: 0.5rem;
+  offset: 0;
+  /* right: 0;
+  bottom: 0; */
 }
 
 .intro-menu a {
@@ -148,5 +150,51 @@
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@media (width < 1400px) {
+  .intro-grid {
+    max-width: 100vw !important;
+    max-height: 100vh !important;
+    display: grid;
+    margin: 0;
+    padding: 0;
+    grid-template-columns: 2fr 1fr 4fr;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
+    transition: 0.7s;
+    overflow: hidden;
+  }
+
+  .intro-grid h1 {
+    font-weight: 900;
+    font-size: 142px;
+    line-height: 106px;
+  }
+
+  @keyframes unwrap-title {
+    0% {
+      letter-spacing: -15px;
+      opacity: 0;
+    }
+
+    100% {
+      letter-spacing: 0;
+      opacity: 1;
+    }
+  }
+
+  .intro-grid h2 {
+    font-weight: 900;
+    font-size: 68px;
+    text-wrap: nowrap;
+    line-height: 60px;
+  }
+
+  .intro-menu a {
+    font-size: 3.8rem;
+    font-weight: 800;
+    line-height: 48px;
   }
 }

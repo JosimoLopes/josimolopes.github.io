@@ -1,0 +1,31 @@
+.work-marquee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.work-box {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.work-box h2 {
+  color: #fff;
+  font-size: 10rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0 15%;
+  will-change: transform;
+}
+
+.work-box h2:hover {
+}
+
+/* 
+.work-box span {
+  color: #fff;
+  position: absolute;
+} */

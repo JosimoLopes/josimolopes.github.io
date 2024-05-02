@@ -12,6 +12,7 @@
 .header .logo {
   -webkit-text-stroke-width: 0.04rem;
   -webkit-text-stroke-color: #fff;
+  color: #000;
   animation: logo-showup 1s forwards;
   color: transparent;
   font-size: 2.5rem;
