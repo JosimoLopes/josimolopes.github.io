@@ -16,9 +16,13 @@ body {
   background: #000;
 }
 
+body::-webkit-scrollbar:hover {
+}
+
 h1,
 h2,
-h3 {
+h3,
+p {
   font-size: 1rem;
   margin: 0;
   padding: 0;
@@ -37,4 +41,9 @@ img {
 
 a {
   text-decoration: none;
+}
+
+.c-scrollbar_thumb {
+  background-color: #fff;
+  opacity: 0.3;
 }

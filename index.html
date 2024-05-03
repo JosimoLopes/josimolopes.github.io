@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-scroll-container>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-
+    <link rel="stylesheet" href="/css/locomotive-scroll.css" />
     <link rel="stylesheet" href="/css/style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,50 +12,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <header class="header">
+    <header class="header" data-remove="blend">
       <a href="#" class="logo">jos<br />imo<br />lop<br />es</a>
-      <span class="header-work-status"></span>
-      <span class="header-work-tooltip">Available for work</span>
+      <ul class="header-menu" data-remove="blend">
+        <li><a href="#work">work</a></li>
+        <li><a href="#">about</a></li>
+        <li><a href="#">contact</a></li>
+      </ul>
     </header>
 
-    <main class="intro">
-      <div class="intro-grid">
+    <main class="intro" data-scroll-section>
+      <div class="intro-grid" data-hover>
         <div class="intro-img-container">
           <img src="/img/josimo1.2.jpeg" alt="profile-img" />
         </div>
         <h1>front-end develo<br />per</h1>
-        <h2>hi, I'm Josimo</h2>
-        <ul class="intro-menu">
-          <li><a href="#work">work</a></li>
-          <li><a href="#">about</a></li>
-          <li><a href="#">contact</a></li>
-        </ul>
+        <h2 data-scroll data-scroll-speed="3" data-scroll-direction="horizontal">hi, I'm Josimo</h2>
       </div>
     </main>
 
-    <section class="work" id="work" aria-label="Work">
-      <div class="work-marquee">
-        <div class="work-box">
-          <span>Front-End Development/UI Design</span>
-          <a data-anima="marquee" aria-hidden="true">Coopfass - Landing Page</a>
-        </div>
+    <section class="work" id="work" aria-label="Work" data-scroll-section>
+      <div class="work-container">
+        <p>Front-End Development/UI Design</p>
+        <a href="https://coopfass.com/" target="_blank"><span class="work-name">Coopfass</span> Website<span class="work-slash">/</span><span class="work-year">2024</span></a>
       </div>
-      <div class="work-marquee">
-        <div class="work-box">
-          <span>Front & Back-End Development/UI Design</span>
-          <a data-anima="marquee" aria-hidden="true">Workando - Web Application</a>
-        </div>
+      <div class="work-container">
+        <p>Front & Back-End Development/UI Design</p>
+        <a href="https://workando-4017206c08ac.herokuapp.com/users/sign_in" target="_blank"><span class="work-name">Workando</span> Web App<span class="work-slash">/</span><span class="work-year">2024</span></a>
       </div>
-      <div class="work-marquee">
-        <div class="work-box">
-          <span>Front-End Development</span>
-          <a data-anima="marquee" aria-hidden="true">Bikcraft - Online Store</a>
-        </div>
+      <div class="work-container">
+        <p>Front-End Development</p>
+        <a href="#"><span class="work-name">Bikcraft</span> Online Store<span class="work-slash">/</span><span class="work-year">2024</span></a>
       </div>
     </section>
 
     <div class="cursor"></div>
 
+    <script src="/js/locomotive-scroll.min.js"></script>
     <script src="/js/script.js"></script>
   </body>
 </html>

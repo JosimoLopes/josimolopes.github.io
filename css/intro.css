@@ -1,6 +1,9 @@
 .intro {
   display: grid;
   padding: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 15;
 }
 
 .intro-grid {
@@ -75,59 +78,6 @@
   color: #000;
 }
 
-.intro-menu {
-  grid-row: 4;
-  grid-column: 3;
-  align-self: end;
-  justify-self: end;
-  text-align: end;
-  /* margin-bottom: -5px; */
-  position: absolute;
-  offset: 0;
-  /* right: 0;
-  bottom: 0; */
-}
-
-.intro-menu a {
-  display: block;
-  font-size: 4.2rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  line-height: 56px;
-  transition: 0.7s;
-  animation: intro-menu-load 0.8s forwards;
-  transform: scale(1.15);
-  color: #fff;
-}
-
-.intro-menu a:hover {
-  color: #ce1483 !important;
-  -webkit-text-stroke-width: 3px;
-  -webkit-text-stroke-color: #000;
-}
-
-.intro-grid:hover > .intro-menu a {
-  color: #000;
-}
-
-.intro-menu li:nth-child(1) a {
-  animation-delay: 0s;
-}
-
-.intro-menu li:nth-child(2) a {
-  animation-delay: 0.2s;
-}
-
-.intro-menu li:nth-child(3) a {
-  animation-delay: 0.4s;
-}
-
-@keyframes intro-menu-load {
-  to {
-    transform: scale(1) translateY(0px);
-  }
-}
-
 .intro-grid .intro-img-container {
   grid-row: 2;
   margin: 0;
@@ -141,6 +91,7 @@
   transform: scale(0);
   animation: scale-load 1.3s forwards;
   transform-origin: left bottom;
+  display: none;
 }
 
 @keyframes scale-load {
