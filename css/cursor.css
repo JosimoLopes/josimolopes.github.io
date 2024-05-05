@@ -11,4 +11,27 @@
 
 .cursor.active {
   display: block;
+  transform: scale(1);
+  animation: scaleBack ease-in-out forwards 0.7s;
+}
+
+.cursor.active.scale {
+  animation: scale 0.7s ease-in-out forwards;
+  mix-blend-mode: normal;
+  z-index: 0;
+}
+
+@keyframes scale {
+  to {
+    transform: scale(20);
+  }
+}
+
+@keyframes scaleBack {
+  from {
+    transform: scale(20);
+  }
+  to {
+    transform: scale(1);
+  }
 }

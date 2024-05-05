@@ -3,20 +3,21 @@
   padding: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 15;
+  /* z-index: 15;  */
 }
 
 .intro-grid {
-  max-width: 100vw !important;
+  width: 100vw !important;
   min-height: 100vh !important;
   display: grid;
   margin: 0;
   padding: 0;
-  grid-template-columns: 2fr 1fr 4fr;
-  grid-template-rows: 1fr 2fr;
+  /* grid-template-columns: 2fr 1fr 4fr; */
+  /* grid-template-rows: 1fr 2fr; */
   position: relative;
-  transition: 0.7s;
+  transition: var(--hover-transition);
   overflow: hidden;
+  justify-items: center;
 }
 
 .intro-grid:hover {
@@ -25,15 +26,21 @@
 }
 
 .intro-grid h1 {
-  grid-row: 2;
-  grid-column: 2 / 4;
+  /* grid-row: 2; */
+  /* grid-column: 2 / 4; */
   text-transform: uppercase;
   font-weight: 900;
   font-size: 172px;
   line-height: 126px;
-  text-wrap: wrap;
+  /* text-wrap: wrap; */
   animation: unwrap-title 1s ease-in-out forwards;
   color: #fff;
+  z-index: 1;
+  user-select: none;
+}
+
+.intro-grid h1:hover {
+  transform: perspective(0) rotateX(0);
 }
 
 .intro-grid:hover > h1 {
@@ -53,8 +60,8 @@
 }
 
 .intro-grid h2 {
-  grid-column: 1 / 3;
-  grid-row: 1;
+  /* grid-column: 1 / 3; */
+  /* grid-row: 1; */
   text-transform: uppercase;
   font-weight: 900;
   font-size: 88px;
@@ -78,12 +85,12 @@
   color: #000;
 }
 
-.intro-grid .intro-img-container {
+/* .intro-grid .intro-img-container {
   grid-row: 2;
   margin: 0;
   padding: 0;
   align-self: end;
-}
+} */
 
 .intro-grid img {
   object-fit: cover;
@@ -103,22 +110,19 @@
 
 @media (width < 1400px) {
   .intro-grid {
-    max-width: 100vw !important;
-    max-height: 100vh !important;
-    display: grid;
-    margin: 0;
-    padding: 0;
-    grid-template-columns: 2fr 1fr 4fr;
-    grid-template-rows: 1fr 1fr;
-    position: relative;
-    transition: 0.7s;
-    overflow: hidden;
+    /* grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr; */
+    justify-items: center;
   }
 
   .intro-grid h1 {
     font-weight: 900;
-    font-size: 142px;
+    font-size: 10rem;
     line-height: 106px;
+    margin: 0;
+    padding: 0;
+    place-self: center;
+    text-align: center;
   }
 
   @keyframes unwrap-title {
@@ -128,16 +132,19 @@
     }
 
     100% {
+      line-height: 120px;
       letter-spacing: 0;
       opacity: 1;
+      transform-origin: left !important;
     }
   }
 
   .intro-grid h2 {
     font-weight: 900;
-    font-size: 68px;
+    font-size: 3rem;
     text-wrap: nowrap;
     line-height: 60px;
+    /* grid-column: 2 / 3; */
   }
 
   .intro-menu a {
