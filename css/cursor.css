@@ -1,0 +1,23 @@
+.cursor {
+  width: 1rem;
+  height: 1rem;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 2;
+  transition: transform 0.7s ease;
+}
+
+.cursor.active {
+  display: block;
+  opacity: 1;
+  transform: translate(-50%, -50%);
+  position: fixed;
+}
+
+.cursor.active.scale {
+  transform: scale(25);
+}

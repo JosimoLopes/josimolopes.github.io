@@ -1,0 +1,51 @@
+.work {
+  width: 90vw;
+  margin: 160px auto;
+}
+
+.work-container {
+  position: relative;
+  padding-top: 24px;
+  margin-bottom: 40px;
+  perspective: 1000px;
+}
+
+.work-container a {
+  font-size: 7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+  text-wrap: nowrap;
+  transition: 0.5s;
+  transform: rotateY(40deg);
+}
+
+.work-container a:hover {
+  color: #a8a8a8;
+}
+
+.work-title {
+  transition: 0.3s;
+}
+
+.work-container a:hover .work-title {
+  -webkit-text-stroke-width: 0.05rem;
+  -webkit-text-stroke-color: #fff;
+  color: transparent;
+}
+
+.work-container p {
+  font-weight: 600;
+  color: #fff;
+  position: absolute;
+  top: 0;
+}
+
+.work-container .work-slash {
+  font-weight: 100;
+}
+
+.work-container .work-year {
+  font-size: 1rem;
+  font-weight: 600;
+}

@@ -1,0 +1,122 @@
+.header {
+  width: 90vw;
+  height: 0;
+  display: flex;
+  margin: 40px auto;
+  position: fixed !important;
+  inset: 0;
+  z-index: 5;
+  mix-blend-mode: difference;
+  justify-content: space-between;
+}
+
+.header .logo {
+  -webkit-text-stroke-width: 0.04rem;
+  -webkit-text-stroke-color: #fff;
+  color: #000;
+  color: transparent;
+  font-size: 2.3rem;
+  font-weight: 900;
+  line-height: 1.3rem;
+  letter-spacing: -0.25rem;
+  transition: 0.5s;
+  animation: logo-fade-in 0.7s forwards;
+  animation-delay: 1.5s;
+  opacity: 0;
+}
+
+@keyframes logo-fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+.header-menu {
+  display: flex;
+  gap: 24px;
+  padding: 0;
+  margin-top: -12px;
+  position: relative;
+}
+
+.header-menu::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 30px;
+  bottom: -42px;
+  left: -2px;
+  background: #000;
+}
+
+.header-menu::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 30px;
+  top: -30px;
+  left: -2px;
+  background: #000;
+  z-index: 1;
+}
+
+.header-menu a {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transform: translateY(25px);
+  animation: menu-slide-up 0.9s forwards;
+  transition: var(--hover-transition) !important;
+  position: relative;
+  letter-spacing: 4px;
+  color: #a8a8a8;
+  padding: 5px 0;
+}
+
+.header li:nth-child(1) a {
+  animation-delay: 0.2s;
+}
+
+.header li:nth-child(2) a {
+  animation-delay: 0.3s;
+}
+
+.header li:nth-child(3) a {
+  animation-delay: 0.5s;
+}
+
+@keyframes menu-slide-up {
+  to {
+    transform: translateY(0px);
+  }
+}
+
+.header-menu li:nth-child(1) a::after,
+.header-menu li:nth-child(2) a::after,
+.header-menu li:nth-child(3) a::after {
+  content: attr(data-link);
+  display: inline-block;
+  position: absolute;
+  inset: 30px 0;
+  color: #a8a8a8;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.header-menu li {
+  transition: 0.3s !important;
+}
+
+.header-menu li:hover {
+  transform: translateY(-25px) !important;
+}
+
+.header-menu li:hover a::after {
+  opacity: 1;
+}
