@@ -1,9 +1,10 @@
 function initCursor() {
   const cursor = document.querySelector(".cursor");
   const mainTitle = document.querySelector('[data-hover="title"]');
+  let isHovering = false;
 
   const handleCursor = (x, y) => {
-    if (x && y) {
+    if ((x && y) || isHovering) {
       cursor.classList.add("active");
     } else {
       cursor.classList.remove("active");
@@ -14,45 +15,29 @@ function initCursor() {
     const x = e.pageX;
     const y = e.pageY;
 
-    cursor.setAttribute("style", `top: ${y - 10}px; left:${x - 10}px;`);
+    setTimeout(() => {
+      cursor.setAttribute("style", `top: ${y - scrollY}px; left:${x - scrollX}px;`);
+    }, 100);
+
     handleCursor(x, y);
   };
 
   const handleMouseOver = (e) => {
-    console.log(e.target === mainTitle);
+    isHovering = true;
     cursor.classList.add("scale");
   };
 
   const handleMouseLeave = (e) => {
+    isHovering = false;
     cursor.classList.remove("scale");
   };
 
-  addEventListener("mousemove", handleCursorPosition);
+  window.addEventListener("mousemove", handleCursorPosition);
   mainTitle.addEventListener("mouseover", handleMouseOver);
   mainTitle.addEventListener("mouseleave", handleMouseLeave);
 }
 
 initCursor();
-
-function initChangeBlendMode() {
-  const elHover = document.querySelector("[data-hover]");
-  const elBlend = document.querySelector('[data-remove="blend"]');
-
-  elHover.addEventListener("mouseover", () => {
-    elBlend.style.mixBlendMode = "normal";
-  });
-
-  elHover.addEventListener("mouseout", () => {
-    elBlend.style.mixBlendMode = "difference";
-  });
-}
-
-initChangeBlendMode();
-
-// const scroll = new LocomotiveScroll({
-//   el: document.querySelector("[data-scroll-container]"),
-//   smooth: true,
-// });
 
 const lenis = new Lenis();
 

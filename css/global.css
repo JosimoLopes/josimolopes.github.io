@@ -9,8 +9,18 @@
   /* cursor: none; */
 }
 
-html {
-  scroll-behavior: smooth;
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #818181;
+}
+
+::-webkit-scrollbar-track {
+  /* border-radius: 5px; */
+  background: rgb(158 158 158 / 50%);
 }
 
 body {
@@ -20,9 +30,7 @@ body {
   font-size: 1rem;
   color: #000;
   background: #000;
-}
-
-body::-webkit-scrollbar:hover {
+  overflow: overlay;
 }
 
 h1,
