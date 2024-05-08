@@ -22,7 +22,7 @@ function initCursor() {
     handleCursor(x, y);
   };
 
-  const handleMouseOver = (e) => {
+  const handleMouseEnter = (e) => {
     isHovering = true;
     cursor.classList.add("scale");
   };
@@ -33,21 +33,25 @@ function initCursor() {
   };
 
   window.addEventListener("mousemove", handleCursorPosition);
-  mainTitle.addEventListener("mouseover", handleMouseOver);
+  mainTitle.addEventListener("mouseenter", handleMouseEnter);
   mainTitle.addEventListener("mouseleave", handleMouseLeave);
 }
 
 initCursor();
 
-const lenis = new Lenis();
+function initLenisSmoothScroll() {
+  const lenis = new Lenis();
 
-lenis.on("scroll", (e) => {
-  // console.log(e);
-});
+  lenis.on("scroll", (e) => {
+    // console.log(e);
+  });
 
-function raf(time) {
-  lenis.raf(time);
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
   requestAnimationFrame(raf);
 }
 
-requestAnimationFrame(raf);
+initLenisSmoothScroll();

@@ -20,4 +20,5 @@
 
 .cursor.active.scale {
   transform: scale(25);
+  background: #fff;
 }
