@@ -1,5 +1,5 @@
 function initCursor() {
-  const cursor = document.querySelector(".cursor");
+  const cursor = document.querySelector('[data-cursor="custom"]');
   const mainTitle = document.querySelector('[data-hover="title"]');
   let isHovering = false;
 
