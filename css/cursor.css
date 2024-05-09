@@ -1,4 +1,4 @@
-.cursor {
+.custom-cursor {
   width: 1rem;
   height: 1rem;
   background-color: #fff;
@@ -11,13 +11,14 @@
   transition: transform 0.7s ease;
 }
 
-.cursor.active {
+.custom-cursor.active {
   display: block;
   opacity: 1;
   transform: translate(-50%, -50%);
   position: fixed;
 }
 
-.cursor.active.scale {
+.custom-cursor.active.scale {
   transform: scale(25);
+  background: #fff;
 }

@@ -14,14 +14,14 @@
   height: 100vh;
 }
 
-.intro-grid .title-container {
+.intro-grid .intro-title-container {
   grid-column: 2;
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   position: relative;
 }
 
-.intro-grid .title-char {
+.intro-grid .title-character {
   text-transform: uppercase;
   font-weight: 800;
   font-size: 12rem;
@@ -41,17 +41,17 @@
   display: flex;
 }
 
-.intro-grid .first-line .title-char:nth-child(1) {
+.intro-grid .first-line .title-character:nth-child(1) {
   transform: translateX(-200px);
   animation: slide-back 1s ease forwards;
 }
 
-.intro-grid .first-line .title-char:nth-child(2) {
+.intro-grid .first-line .title-character:nth-child(2) {
   transform: scaleX(7);
   animation: scale-back 1s ease forwards;
 }
 
-.intro-grid .first-line .title-char:nth-child(3) {
+.intro-grid .first-line .title-character:nth-child(3) {
   transform: translateX(280px);
   animation: slide-back 1s ease forwards;
 }
@@ -93,40 +93,40 @@
   }
 }
 
-.intro-grid .second-line .title-char {
+.intro-grid .second-line .title-character {
   transform: translateY(150px);
   animation: slide-up 0.9s ease forwards;
 }
 
-.intro-grid .second-line .title-char:nth-child(1) {
+.intro-grid .second-line .title-character:nth-child(1) {
   animation-delay: 0.1s;
 }
 
-.intro-grid .second-line .title-char:nth-child(2) {
+.intro-grid .second-line .title-character:nth-child(2) {
   animation-delay: 0.2s;
 }
 
-.intro-grid .second-line .title-char:nth-child(3) {
+.intro-grid .second-line .title-character:nth-child(3) {
   animation-delay: 0.3s;
 }
 
-.intro-grid .second-line .title-char:nth-child(4) {
+.intro-grid .second-line .title-character:nth-child(4) {
   animation-delay: 0.4s;
 }
-.intro-grid .second-line .title-char:nth-child(5) {
+.intro-grid .second-line .title-character:nth-child(5) {
   animation-delay: 0.5s;
 }
-.intro-grid .second-line .title-char:nth-child(6) {
+.intro-grid .second-line .title-character:nth-child(6) {
   animation-delay: 0.6s;
 }
 
-.intro-grid .second-line .title-char:nth-child(7) {
+.intro-grid .second-line .title-character:nth-child(7) {
   animation-delay: 0.7s;
 }
-.intro-grid .second-line .title-char:nth-child(8) {
+.intro-grid .second-line .title-character:nth-child(8) {
   animation-delay: 0.8s;
 }
-.intro-grid .second-line .title-char:nth-child(9) {
+.intro-grid .second-line .title-character:nth-child(9) {
   animation-delay: 0.9s;
 }
 @keyframes slide-up {
@@ -143,7 +143,7 @@
   font-size: 2.5rem;
   align-self: end;
   color: #000;
-  mix-blend-mode: luminosity;
+  mix-blend-mode: multiply;
   z-index: 3;
   margin-left: 10px;
 }
