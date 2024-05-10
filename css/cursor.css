@@ -22,3 +22,15 @@
   transform: scale(25);
   background: #fff;
 }
+
+@media (width < 1400px) {
+  .custom-cursor.active.scale {
+    transform: scale(22);
+  }
+}
+
+@media (width < 1040px) {
+  .custom-cursor.active.scale {
+    transform: scale(20);
+  }
+}

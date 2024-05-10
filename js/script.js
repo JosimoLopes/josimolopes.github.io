@@ -15,9 +15,10 @@ function initCursor() {
     const x = e.pageX;
     const y = e.pageY;
 
-    setTimeout(() => {
-      cursor.setAttribute("style", `top: ${y - scrollY}px; left:${x - scrollX}px;`);
-    }, 100);
+    cursor.setAttribute("style", `top: ${y - scrollY}px; left:${x - scrollX}px;`);
+
+    // setTimeout(() => {
+    // }, 100);
 
     handleCursor(x, y);
   };
@@ -55,3 +56,14 @@ function initLenisSmoothScroll() {
 }
 
 initLenisSmoothScroll();
+
+const internalAnchor = document.querySelector('[data-link="work"]');
+const target = document.getElementById("work");
+
+internalAnchor.addEventListener("click", scrollToTarget);
+
+function scrollToTarget(e) {
+  console.log(e);
+  e.preventDefault();
+  target.scrollIntoView({ behavior: "smooth", block: "start" });
+}
