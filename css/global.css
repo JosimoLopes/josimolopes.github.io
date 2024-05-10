@@ -1,12 +1,11 @@
 :root {
   --hover-transition: ease 0.7s;
-  --transition-speed: 1s;
   --pink-5: #ce1483;
 }
 
 * {
   box-sizing: border-box;
-  /* cursor: none; */
+  cursor: none;
 }
 
 ::-webkit-scrollbar {

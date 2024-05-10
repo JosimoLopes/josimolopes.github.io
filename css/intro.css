@@ -39,6 +39,7 @@
 .intro-grid .first-line {
   grid-row: 1;
   display: flex;
+  max-height: max-content;
 }
 
 .intro-grid .first-line .title-character:nth-child(1) {
@@ -71,6 +72,7 @@
 .intro-grid .second-line {
   grid-row: 2;
   display: flex;
+  max-height: fit-content;
 }
 
 .intro-grid .second-line::after {
@@ -78,10 +80,10 @@
   display: inline-block;
   position: absolute;
   background: #000;
-  width: 100%;
-  height: 70%;
-  left: 10px;
-  bottom: -70%;
+  width: 105%;
+  height: 75%;
+  left: -2.5%;
+  bottom: -75%;
   z-index: 2;
   animation: remove 0.5s forwards;
   animation-delay: 1.5s;
@@ -149,17 +151,23 @@
 }
 
 @media (width < 1400px) {
-  .intro-grid .subtitle {
-    font-weight: 900;
-    font-size: 3rem;
-    text-wrap: nowrap;
-    line-height: 60px;
-    /* grid-column: 2 / 3; */
+  .intro-grid .title-character {
+    font-size: 10rem;
+    line-height: 7.5rem;
   }
 
-  .intro-menu a {
-    font-size: 3.8rem;
-    font-weight: 800;
-    line-height: 48px;
+  .intro-grid .subtitle {
+    font-size: 1.6rem;
+  }
+}
+
+@media (width < 1040px) {
+  .intro-grid .title-character {
+    font-size: 8rem;
+    line-height: 5.8rem;
+  }
+
+  .intro-grid .subtitle {
+    font-size: 1.2rem;
   }
 }
