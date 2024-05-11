@@ -1,6 +1,4 @@
 :root {
-  --hover-transition: ease 0.7s;
-  --pink-5: #ce1483;
 }
 
 * {
@@ -18,7 +16,6 @@
 }
 
 ::-webkit-scrollbar-track {
-  /* border-radius: 5px; */
   background: rgb(158 158 158 / 50%);
 }
 

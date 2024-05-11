@@ -57,13 +57,17 @@ function initLenisSmoothScroll() {
 
 initLenisSmoothScroll();
 
-const internalAnchor = document.querySelector('[data-link="work"]');
-const target = document.getElementById("work");
+function initScrollToTarget() {
+  const internalAnchor = document.querySelector('[data-link="work"]');
+  const target = document.getElementById("work");
 
-internalAnchor.addEventListener("click", scrollToTarget);
+  internalAnchor.addEventListener("click", scrollToTarget);
 
-function scrollToTarget(e) {
-  console.log(e);
-  e.preventDefault();
-  target.scrollIntoView({ behavior: "smooth", block: "start" });
+  function scrollToTarget(e) {
+    console.log(e);
+    e.preventDefault();
+    target.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
 }
+
+initScrollToTarget();
