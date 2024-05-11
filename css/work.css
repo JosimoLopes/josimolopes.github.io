@@ -23,8 +23,15 @@
   bottom: 0;
   left: 0;
   transform: scaleX(0);
-  animation: line-scroll 1s linear forwards;
   transform-origin: right;
+}
+
+.work-container.active:nth-child(2)::after {
+  transform-origin: left;
+}
+
+.work-container.active::after {
+  animation: line-scroll 1s linear forwards;
 }
 
 @keyframes line-scroll {
