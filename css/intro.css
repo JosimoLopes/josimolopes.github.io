@@ -1,12 +1,11 @@
 .intro {
   display: grid;
-  padding: 0;
 }
 
 .intro-grid {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
   margin: 0;
   padding: 0;
   position: relative;
@@ -146,7 +145,7 @@
   align-self: end;
   color: #000;
   mix-blend-mode: multiply;
-  z-index: 3;
+  z-index: 11;
   margin-left: 10px;
 }
 
