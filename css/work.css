@@ -6,6 +6,21 @@
 
 .work-section-title {
   color: #fff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.work-container .work-info {
+  font-weight: 500;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  padding-top: 1.25rem;
+  letter-spacing: 1.1px;
 }
 
 .work-container {
@@ -31,7 +46,7 @@
 }
 
 .work-container.active::after {
-  animation: line-scroll 1s linear forwards;
+  animation: line-scroll 1.2s linear forwards;
 }
 
 @keyframes line-scroll {
@@ -71,14 +86,6 @@
 .work-container a:hover .work-name {
   color: #fff;
   cursor: pointer;
-}
-
-.work-container .work-info {
-  font-weight: 500;
-  color: #fff;
-  position: absolute;
-  top: 0;
-  padding-top: 1rem;
 }
 
 .work-container .work-type {
