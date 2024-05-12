@@ -40,20 +40,8 @@
   }
 }
 
-.work-container:nth-last-child(1)::before {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  width: 100%;
-  height: 100px;
-  background: #000;
-  bottom: -100px;
-  left: 0;
-  z-index: 3;
-}
-
 .work-container a {
-  font-size: 6.5rem;
+  font-size: 7rem;
   font-weight: 800;
   text-transform: uppercase;
   color: transparent;
@@ -62,14 +50,14 @@
   white-space: nowrap;
   margin-left: 1px;
   display: inline-block;
-  transform: translateX(30px);
-  animation: worklink-slideup ease forwards;
+  transform: translateX(40px);
+  animation: worklink-slide ease forwards;
   animation-timeline: view();
   animation-range: cover 1vh 40vh;
   opacity: 0;
 }
 
-@keyframes worklink-slideup {
+@keyframes worklink-slide {
   to {
     transform: translateY(0);
     opacity: 1;
@@ -82,6 +70,7 @@
 
 .work-container a:hover .work-name {
   color: #fff;
+  cursor: pointer;
 }
 
 .work-container .work-info {
@@ -94,6 +83,10 @@
 
 .work-container .work-type {
   position: relative;
+}
+
+.work-container .work-type:hover {
+  cursor: pointer;
 }
 
 .work-container .work-type::after {
@@ -117,91 +110,55 @@
   margin-left: 32px;
 }
 
-@media (width < 1530px) {
+@media (width < 1440px) {
+  .work-container a {
+    font-size: 6.5rem;
+  }
+}
+
+@media (width < 1350px) {
   .work-container a {
     font-size: 6rem;
   }
-
-  .work-container .work-slash::after {
-    bottom: 28px;
-    right: 50px;
-  }
 }
 
-@media (width < 1430px) {
+@media (width < 1240px) {
   .work-container a {
     font-size: 5.5rem;
   }
+}
 
-  .work-container .work-slash::after {
-    bottom: 24px;
-    right: 50px;
-    font-size: 0.5rem;
+@media (width < 1140px) {
+  .work-container a {
+    font-size: 5rem;
   }
 
-  .work-container a:hover .work-slash {
-    transform: translateX(250px);
+  .work-container .work-year {
+    font-size: 0.8rem;
   }
 
-  .work-container a:hover .work-year {
-    transform: translateX(250px);
+  .work-container .work-info {
+    font-size: 0.8rem;
+  }
+
+  .work-container .work-type::after {
+    bottom: 14px;
   }
 }
 
-@media (width < 1330px) {
+@media (width < 1050px) {
   .work-container a {
     font-size: 4.5rem;
   }
-
-  .work-container .work-slash::after {
-    font-size: 0.5rem;
-    bottom: 16px;
-  }
 }
 
-@media (width < 1210px) {
-  .work-container .work-slash::after {
-    font-size: 0.4rem;
-    bottom: 20px;
-    right: 50px;
-  }
-
-  .work-container a:hover .work-slash {
-    transform: translateX(190px);
-  }
-
-  .work-container a:hover .work-year {
-    transform: translateX(190px);
-  }
-}
-
-@media (width < 1080px) {
+@media (width < 960px) {
   .work-container a {
     font-size: 4rem;
   }
 
   .work-container .work-year {
-    font-size: 0.8rem;
-  }
-
-  .work-container p {
-    padding-top: 0.8rem;
-  }
-
-  .work-container .work-slash::after {
-    font-size: 0.4rem;
-    bottom: 20px;
-    right: 40px;
-  }
-}
-
-@media (width < 970px) {
-  .work-container a {
-    font-size: 3.5rem;
-  }
-
-  .work-container .work-year {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     font-size: 500;
   }
 
@@ -209,15 +166,14 @@
     padding-top: 0.6rem;
   }
 
-  .work-container .work-slash::after {
-    bottom: 14px;
-    right: 30px;
+  .work-container .work-type::after {
+    bottom: 12px;
   }
 }
 
 @media (width < 860px) {
   .work-container a {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 
   .work-container .work-year {
@@ -229,7 +185,7 @@
     padding-top: 0.4rem;
   }
 
-  .work-container .work-slash::after {
-    bottom: 8px;
+  .work-container .work-type::after {
+    bottom: 10px;
   }
 }
