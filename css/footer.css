@@ -1,0 +1,108 @@
+.footer {
+  max-width: 100vw;
+  margin: 200px auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer .marquee {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: 2rem;
+  padding-top: 20px;
+  margin-bottom: 40px;
+}
+
+.footer .footer-intro {
+  position: absolute;
+  color: #fff;
+  text-transform: capitalize;
+  left: 22%;
+  top: 0;
+}
+
+.footer .marquee::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 90vw;
+  height: 2px;
+  background: #1a1a1a;
+  bottom: 0;
+  left: 5%;
+  transform: scaleX(0);
+}
+
+.marquee.active::after {
+  animation: line-scroll 1.2s linear forwards;
+}
+
+.footer .marquee-content {
+  display: flex;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  min-width: 100%;
+  gap: 2rem;
+  animation: scroll 20s linear infinite;
+}
+
+.footer .marquee:hover .marquee-content {
+  animation-play-state: paused !important;
+}
+
+.footer .marquee-content li {
+  color: #fff;
+  font-size: 8rem;
+  font-weight: 800;
+}
+
+.footer .marquee-content a {
+  color: #fff;
+  font-size: 8rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.footer .marquee-content a:hover {
+  color: transparent;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #fff;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 2rem));
+  }
+}
+
+.footer .connect-menu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 40px;
+  left: 5%;
+  align-content: space-around;
+
+  mix-blend-mode: difference;
+  gap: 16px;
+}
+
+.footer .connect-menu a {
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.footer .connect-menu a:hover {
+  color: #a8a8a8;
+}

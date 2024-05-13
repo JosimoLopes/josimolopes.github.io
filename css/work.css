@@ -4,6 +4,13 @@
   position: relative;
 }
 
+.work-container {
+  position: relative;
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
 .work-section-title {
   color: #fff;
   margin-bottom: 20px;
@@ -21,11 +28,6 @@
   top: 0;
   padding-top: 1.25rem;
   letter-spacing: 1.1px;
-}
-
-.work-container {
-  position: relative;
-  padding-top: 24px;
 }
 
 .work-container::after {
@@ -140,10 +142,6 @@
     font-size: 5rem;
   }
 
-  .work-container .work-year {
-    font-size: 0.8rem;
-  }
-
   .work-container .work-info {
     font-size: 0.8rem;
   }
@@ -169,8 +167,9 @@
     font-size: 500;
   }
 
-  .work-container p {
+  .work-container .work-info {
     padding-top: 0.6rem;
+    font-size: 0.6rem;
   }
 
   .work-container .work-type::after {

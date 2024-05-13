@@ -1,7 +1,6 @@
 export default function initCursor() {
   const cursor = document.querySelector('[data-cursor="custom"]');
-  const mainTitle = document.querySelector("[data-hover]");
-  const anchors = document.querySelectorAll("a");
+  const elementsHover = document.querySelectorAll("[data-hover]");
   let isHovering = false;
 
   const handleCursor = (x, y) => {
@@ -13,32 +12,35 @@ export default function initCursor() {
   };
 
   const handleCursorPosition = (e) => {
-    const x = e.pageX;
-    const y = e.pageY;
+    const x = e.pageX - scrollX;
+    const y = e.pageY - scrollY;
 
-    cursor.setAttribute("style", `top: ${y - scrollY}px; left:${x - scrollX}px;`);
+    cursor.style.top = y + "px";
+    cursor.style.left = x + "px";
+
     handleCursor(x, y);
   };
 
-  const handleMouseEnter = (e) => {
+  function handleMouseEnter(e) {
     isHovering = true;
-    cursor.classList.add("scale");
-  };
 
-  const handleMouseLeave = (e) => {
+    if (e.currentTarget.classList.contains("intro-title-container")) {
+      cursor.classList.add("scale");
+    } else {
+      cursor.classList.add("scale-link");
+    }
+  }
+
+  const handleMouseLeave = () => {
     isHovering = false;
-    cursor.classList.remove("scale");
-  };
 
-  const removeCustomCursor = (e) => {
-    cursor.style.display = "none";
+    cursor.classList.remove("scale", "scale-link");
   };
 
   window.addEventListener("mousemove", handleCursorPosition);
-  mainTitle.addEventListener("mouseenter", handleMouseEnter);
-  mainTitle.addEventListener("mouseleave", handleMouseLeave);
 
-  anchors.forEach((a) => {
-    a.addEventListener("mouseover", removeCustomCursor);
+  elementsHover.forEach((el) => {
+    el.addEventListener("mouseenter", handleMouseEnter);
+    el.addEventListener("mouseleave", handleMouseLeave);
   });
 }
