@@ -24,7 +24,7 @@
 }
 
 .custom-cursor.active.scale-link {
-  transform: scale(5);
+  transform: scale(3);
   background: #fff;
 }
 
