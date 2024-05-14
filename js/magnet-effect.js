@@ -1,41 +1,28 @@
-export default function initMagnetEffect() {}
-
-const elementsHover = document.querySelectorAll('[data-anima="hover"]');
-const elementsMagnet = document.querySelectorAll('[data-anima="magnet"]');
-
-elementsHover.forEach((el) => {
-  el.addEventListener("mouseenter", handleMouseEnter);
-});
-
-function handleMouseEnter() {
-  handleMouseLeave.element = this;
-
-  this.addEventListener("mousemove", handleMouseMove);
-  this.addEventListener("mouseleave", handleMouseLeave);
-}
-
-const handleMouseLeave = {
-  element: "",
-  handleEvent() {
-    resetIconPosition();
-    this.element.removeEventListener("mousemove", handleMouseMove);
-  },
-};
-
-function resetIconPosition() {
-  elementsMagnet.forEach((el) => {
-    el.style.transform = "translate(0px, 0px)";
-    el.style.transition = "transform 0.2s ease";
+export default function initMagnetEffect() {
+  const magnetTargets = document.querySelectorAll('[data-magnet="target"]');
+  magnetTargets.forEach((t) => {
+    t.addEventListener("mousemove", handleMouseMove);
+    t.addEventListener("mouseout", handleMouseOut);
   });
-}
 
-function handleMouseMove(e) {
-  const x = e.offsetX;
-  const y = e.offsetY;
-  const transformX = (x - 50) / 1.2;
-  const transformY = (y - 50) / 1.2;
+  function handleMouseOut() {
+    resetIconPosition(this);
+    // this.removeEventListener("mousemove", handleMouseMove);
+  }
 
-  elementsMagnet.forEach((el) => {
-    el.setAttribute("style", `transform: translate(${transformX}px, ${transformY}px)`);
-  });
+  function resetIconPosition(el) {
+    el.style.transform = "";
+    // el.style.transition = "transform 0.2s";
+  }
+
+  function handleMouseMove(e) {
+    const move = 15;
+    const x = e.offsetX;
+    const y = e.offsetY;
+    const targetWidth = this.offsetWidth;
+    const targetHeight = this.offsetHeight;
+    const transX = (x / targetWidth) * (move * 2) - move;
+    const transY = (y / targetHeight) * (move * 2) - move;
+    this.style.transform = `translateX(${transX}px) translateY(${transY}px)`;
+  }
 }

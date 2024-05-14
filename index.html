@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/lenis-scroll.css" />
+    <title>Josimo Lopes</title>
+    <meta name="description" content="Front-end developer with a knack for crafting beautiful and intuitive web experiences." />
+
     <link rel="stylesheet" href="/css/style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,16 +14,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/2f8d0414ae.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header class="header">
-      <div class="logo-container" data-anima="hover" data-hover>
-        <a href="#intro" class="logo" data-anima="magnet">jos<br />imo<br />lop<br />es</a>
-      </div>
+      <a href="#intro" class="logo" data-hover data-magnet="target">jos<br />imo<br />lop<br />es</a>
       <ul class="main-menu">
-        <li><a href="#work" data-link="work">work</a></li>
-        <li><a href="#about" data-link="about">about</a></li>
-        <li><a href="#contact" data-link="contact">contact</a></li>
+        <li><a href="#work" data-link="work" data-hover>work</a></li>
+        <li><a href="#about" data-link="about" data-hover>about</a></li>
+        <li><a href="#contact" data-link="contact" data-hover>contact</a></li>
       </ul>
     </header>
 
@@ -55,15 +55,15 @@
       <div class="work-items">
         <div class="work-container" data-anima="line">
           <p class="work-info">Front-End Development/UI Design</p>
-          <a href="https://coopfass.com/" target="_blank"><span class="work-name" data-title="Coopfass">Coopfass</span><span class="work-type"> Website</span><span class="work-year">2024</span></a>
+          <a href="https://coopfass.com/" target="_blank" data-hover><span class="work-name" data-title="Coopfass">Coopfass</span><span class="work-type"> Website</span><span class="work-year">2024</span></a>
         </div>
         <div class="work-container" data-anima="line">
           <p class="work-info">Front & Back-End Development/UI Design</p>
-          <a href="https://workando-4017206c08ac.herokuapp.com/users/sign_in" target="_blank"><span class="work-name" data-title="Workando">Workando</span><span class="work-type"> Web App</span><span class="work-year">2024</span></a>
+          <a href="https://workando-4017206c08ac.herokuapp.com/users/sign_in" target="_blank" data-hover><span class="work-name" data-title="Workando">Workando</span><span class="work-type"> Web App</span><span class="work-year">2024</span></a>
         </div>
         <div class="work-container" data-anima="line">
           <p class="work-info">Front-End Development</p>
-          <a href="#"><span class="work-name" data-title="Bikcraft">Bikcraft</span> <span class="work-type"> Store</span><span class="work-year">2024</span></a>
+          <a href=""><span class="work-name" data-title="Bikcraft">Bikcraft</span> <span class="work-type" data-hover> Store</span><span class="work-year">2024</span></a>
         </div>
       </div>
     </section>
@@ -75,30 +75,36 @@
 
     <footer class="footer" id="contact">
       <div class="marquee" data-anima="line">
-        <p class="footer-intro">Need help with a question, have a proposal to discuss, or want to collaborate? Reach out!</p>
+        <p class="footer-intro">Got a question, have a proposal to discuss, or want to collaborate? Reach out!</p>
         <ul class="marquee-content">
           <li>—</li>
-          <li><a href="">Let's collaborate</a></li>
+          <li><a href="" data-hover>Let's collaborate</a></li>
           <li>—</li>
-          <li><a href="">Let's Talk</a></li>
+          <li><a href="" data-hover>Let's Talk</a></li>
           <li>—</li>
-          <li><a href="">Say Hello</a></li>
+          <li><a href="" data-hover>Say Hello</a></li>
         </ul>
 
-        <ul class="marquee-content" aria-hidden="true">
+        <ul class="marquee-content">
           <li>—</li>
-          <li><a href="">Let's collaborate</a></li>
+          <li><a href="" data-hover>Let's collaborate</a></li>
           <li>—</li>
-          <li><a href="">Let's Talk</a></li>
+          <li><a href="" data-hover>Let's Talk</a></li>
           <li>—</li>
-          <li><a href="">Say Hello</a></li>
+          <li><a href="" data-hover>Say Hello</a></li>
         </ul>
       </div>
 
       <ul class="connect-menu">
-        <li><a href="">Linkdin</a></li>
-        <li><a href="">Github</a></li>
-        <li><a href="">Instagram </a></li>
+        <li>
+          <a href="https://www.linkedin.com/in/josimolopes/" target="_blank" data-hover data-magnet="target"><img src="/img/linkedin-outlined-2.svg" width="25" height="25" /></a>
+        </li>
+        <li>
+          <a href="https://github.com/JosimoLopes" target="_blank" data-hover data-magnet="target"><img src="/img/githuboutlined.svg" alt="GitHub" width="25" height="25" /></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/lopesjosimo/" target="_blank" data-hover data-magnet="target"><img src="/img/instagramoutlined.svg" alt="Instagram" width="25" height="25" /></a>
+        </li>
       </ul>
     </footer>
 

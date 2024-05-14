@@ -15,8 +15,8 @@ export default function initCursor() {
     const x = e.pageX - scrollX;
     const y = e.pageY - scrollY;
 
-    cursor.style.top = y + "px";
-    cursor.style.left = x + "px";
+    cursor.style.top = y - 8 + "px";
+    cursor.style.left = x - 8 + "px";
 
     handleCursor(x, y);
   };
