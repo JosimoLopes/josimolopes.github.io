@@ -1,4 +1,13 @@
 :root {
+  --light-gray: #a8a8a8;
+  --medium-gray: #818181;
+  --dark-gray: #1a1a1a;
+  --pure-white: #fff;
+  --dark-black: #000;
+  --open-green: #21a179;
+  --transition-duration: 0.3s;
+  --animation-duration: 0.8s;
+  --transition-easing: cubic-bezier(0.5, 0, 0.5, 1);
 }
 
 * {
@@ -12,11 +21,11 @@
 
 ::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background: #818181;
+  background: var(--dark-gray);
 }
 
 ::-webkit-scrollbar-track {
-  background: rgb(158 158 158 / 50%);
+  background: rgb(158 158 158 / 10%);
 }
 
 body {
@@ -24,8 +33,8 @@ body {
   padding: 0;
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
-  color: #000;
-  background: #000;
+  color: var(--dark-black);
+  background: var(--dark-black);
   overflow: overlay;
 }
 
@@ -54,6 +63,6 @@ a {
 }
 
 .c-scrollbar_thumb {
-  background-color: #fff;
+  background-color: var(--pure-white);
   opacity: 0.3;
 }

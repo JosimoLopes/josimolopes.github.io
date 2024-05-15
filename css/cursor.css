@@ -1,6 +1,6 @@
 .custom-cursor {
-  width: 1rem;
-  height: 1rem;
+  width: 14px;
+  height: 14px;
   background-color: #fff;
   border-radius: 50%;
   position: absolute;
@@ -19,12 +19,12 @@
 }
 
 .custom-cursor.active.scale {
-  transform: scale(25);
+  transform: scale(26);
   background: #fff;
 }
 
 .custom-cursor.active.scale-link {
-  transform: scale(3);
+  transform: scale(2.5);
   background: #fff;
 }
 

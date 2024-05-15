@@ -23,7 +23,7 @@
   font-size: 13rem;
   line-height: 0.73;
   letter-spacing: -1rem;
-  color: #fff;
+  color: var(--pure-white);
   user-select: none;
   padding: 0;
   margin: 0;
@@ -39,17 +39,17 @@
 
 .first-line .title-character:nth-child(1) {
   transform: translateX(-150px);
-  animation: slide-back 1s ease forwards;
+  animation: slide-back 1s var(--transition-easing) forwards;
 }
 
 .first-line .title-character:nth-child(2) {
   transform: scaleX(4);
-  animation: scale-back 1s ease forwards;
+  animation: scale-back 1s var(--transition-easing) forwards;
 }
 
 .first-line .title-character:nth-child(3) {
   transform: translateX(200px);
-  animation: slide-back 1s ease forwards;
+  animation: slide-back 1s var(--transition-easing) forwards;
 }
 
 @keyframes scale-back {
@@ -68,13 +68,13 @@
   content: "";
   display: inline-block;
   position: absolute;
-  background: #000;
+  background: var(--dark-black);
   width: 105%;
   height: 75%;
   left: -2.5%;
   bottom: -78%;
   z-index: 2;
-  animation: remove 0.5s forwards;
+  animation: remove 0s forwards;
   animation-delay: 1.5s;
 }
 
@@ -86,7 +86,7 @@
 
 .second-line .title-character {
   transform: translateY(160px);
-  animation: slide-up 0.9s ease forwards;
+  animation: slide-up 0.9s var(--transition-easing) forwards;
 }
 
 .second-line .title-character:nth-child(1) {
@@ -134,7 +134,7 @@
   font-weight: 900;
   font-size: 2.5rem;
   align-self: end;
-  color: #000;
+  color: var(--dark-black);
   mix-blend-mode: multiply;
   z-index: 11;
   margin-left: 10px;
