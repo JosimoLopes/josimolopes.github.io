@@ -20,10 +20,8 @@
 }
 
 .work-container .work-info {
-  font-weight: 500;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  color: #fff;
+  font-weight: 300;
+  color: var(--pure-white);
   position: absolute;
   top: 0;
   padding-top: 1.25rem;
@@ -36,7 +34,7 @@
   position: absolute;
   width: 100%;
   height: 2px;
-  background: #1a1a1a;
+  background: var(--dark-gray);
   bottom: 0;
   left: 0;
   transform: scaleX(0);
@@ -48,7 +46,7 @@
 }
 
 .work-container.active::after {
-  animation: line-scroll 1.2s linear forwards;
+  animation: line-scroll 1.5s linear forwards;
 }
 
 @keyframes line-scroll {
@@ -63,12 +61,12 @@
   text-transform: uppercase;
   color: transparent;
   -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color: #fff;
+  -webkit-text-stroke-color: var(--pure-white);
   white-space: nowrap;
   margin-left: 1px;
   display: inline-block;
   transform: translateX(40px);
-  animation: worklink-slide ease forwards;
+  animation: worklink-slide var(--transition-easing) forwards;
   animation-timeline: view();
   animation-range: cover 1vh 40vh;
   opacity: 0;
@@ -82,11 +80,12 @@
 }
 
 .work-name {
-  transition: 0.3s ease-in-out;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-easing);
 }
 
 .work-container a:hover .work-name {
-  color: #fff;
+  color: var(--pure-white);
   cursor: pointer;
 }
 
@@ -103,7 +102,7 @@
   display: inline-block;
   width: 2px;
   height: 60%;
-  background-color: #fff;
+  background-color: var(--pure-white);
   transform: rotate(30deg);
   position: absolute;
   bottom: 18px;
@@ -114,8 +113,7 @@
   font-size: 1rem;
   font-weight: 300;
   display: inline-block;
-  transition: 0.7s ease;
-  color: #fff;
+  color: var(--pure-white);
   margin-left: 32px;
 }
 
