@@ -12,7 +12,6 @@
 
 * {
   box-sizing: border-box;
-  cursor: none !important;
 }
 
 ::-webkit-scrollbar {
@@ -65,4 +64,10 @@ a {
 .c-scrollbar_thumb {
   background-color: var(--pure-white);
   opacity: 0.3;
+}
+
+@media (width > 760px) {
+  * {
+    cursor: none;
+  }
 }
