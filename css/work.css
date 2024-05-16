@@ -1,7 +1,7 @@
 .work {
   width: 90vw;
   margin: 180px auto 360px auto;
-  position: relative;
+  position: relati;
 }
 
 .work-container {
@@ -191,5 +191,11 @@
 
   .work-container .work-type::after {
     bottom: 10px;
+  }
+}
+
+@media (width < 780px) {
+  .work {
+    display: none;
   }
 }
