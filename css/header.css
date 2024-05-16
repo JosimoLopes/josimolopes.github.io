@@ -6,24 +6,26 @@
   position: fixed !important;
   inset: 0;
   z-index: 5;
-  mix-blend-mode: difference;
   justify-content: space-between;
+  background-color: transparent;
+  mix-blend-mode: difference;
 }
 
-.header .logo {
+.logo {
   height: 100px;
   width: 100px;
   display: block;
   padding: 20px;
   margin-top: -10px;
   margin-left: -16px;
-  -webkit-text-stroke-width: 0.04rem;
-  -webkit-text-stroke-color: var(--pure-white);
+  -webkit-text-stroke-width: var(--text-stroke-logo);
+  -webkit-text-stroke-color: var(--with-blend-mode);
   color: transparent;
   font-size: 2.3rem;
   font-weight: 900;
   line-height: 1.3rem;
   letter-spacing: -0.25rem;
+  cursor: pointer;
   transition: transform var(--transition-duration) cubic-bezier(0.3, 1, 0.7, 1);
   animation: logo-fade-in var(--animation-duration) var(--transition-easing) forwards;
   animation-delay: 1.5s;
@@ -52,7 +54,7 @@
   height: 32px;
   bottom: -46px;
   left: -2px;
-  background: var(--dark-black);
+  background: var(--with-blend-mode-black);
 }
 
 .main-menu::before {
@@ -63,7 +65,7 @@
   height: 24px;
   top: -22px;
   left: -2px;
-  background: var(--dark-black);
+  background: var(--with-blend-mode-black);
   z-index: 1;
 }
 
@@ -76,8 +78,9 @@
   animation: menu-slide-up var(--animation-duration) var(--transition-easing) forwards;
   position: relative;
   letter-spacing: 4px;
-  color: var(--light-gray);
+  color: var(--with-blend-mode);
   padding: 5px 0;
+  cursor: pointer;
 }
 
 @keyframes menu-slide-up {
@@ -105,7 +108,7 @@
   display: inline-block;
   position: absolute;
   inset: 30px 0;
-  color: var(--pure-white);
+  color: var(--with-blend-mode);
   width: 100%;
   height: 100%;
   transition-duration: var(--transition-duration);

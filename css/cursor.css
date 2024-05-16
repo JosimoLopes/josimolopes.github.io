@@ -28,7 +28,7 @@
   background: #fff;
 }
 
-@media (width < 1400px) {
+@media (width < 1410px) {
   .custom-cursor.active.scale {
     transform: scale(22);
   }
@@ -37,5 +37,17 @@
 @media (width < 1040px) {
   .custom-cursor.active.scale {
     transform: scale(20);
+  }
+}
+
+@media (width < 850px) {
+  .custom-cursor.active.scale {
+    transform: scale(16);
+  }
+}
+
+@media (width < 760px) {
+  .custom-cursor.active {
+    display: none;
   }
 }

@@ -5,11 +5,11 @@
 }
 
 .about .about-title {
-  color: var(--pure-white);
+  color: var(--text-color-1);
   margin-bottom: 40px;
   text-transform: uppercase;
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: var(--font-weight-2);
 }
 
 .about .about-text {
@@ -19,11 +19,11 @@
   font-weight: 600;
   user-select: none;
   letter-spacing: 0.8px;
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--text-color-effect);
   background-clip: text;
   background-repeat: no-repeat;
   background-size: 0% 100%;
-  background-image: linear-gradient(90deg, var(--pure-white), var(--pure-white));
+  background-image: linear-gradient(90deg, var(--text-color-1), var(--text-color-1));
   animation: scroll-reveal linear forwards;
   animation-timeline: view();
   animation-range: cover 10vh 70vh;
@@ -44,5 +44,11 @@
 @keyframes img-scale {
   to {
     transform: scale(1);
+  }
+}
+
+@media (width < 1050px) {
+  .about .about-title {
+    font-size: 1rem;
   }
 }

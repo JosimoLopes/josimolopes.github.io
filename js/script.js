@@ -3,9 +3,11 @@ import initLenisSmoothScroll from "./smooth-scroll-controller.js";
 import initScrollToTarget from "./scroll-target-controller.js";
 import initAnimaScroll from "./anima-scroll-controller.js";
 import initMagnetEffect from "./magnet-effect.js";
+import initLightDarkMode from "./light-dark-mode.js";
 
 initCursor();
 initLenisSmoothScroll();
 initScrollToTarget();
 initAnimaScroll();
 initMagnetEffect();
+initLightDarkMode();
