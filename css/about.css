@@ -52,3 +52,9 @@
     font-size: 1rem;
   }
 }
+
+@media (width < 780px) {
+  .about {
+    display: none;
+  }
+}

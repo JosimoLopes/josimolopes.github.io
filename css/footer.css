@@ -162,6 +162,10 @@
   font-weight: var(--font-weight-1);
 }
 
+.email b {
+  display: none;
+}
+
 .email:hover {
   color: var(--text-color-3);
 }
@@ -244,4 +248,36 @@
 
 .light-dark-toggle.active::after {
   transform: translateY(12px);
+}
+
+@media (width < 780px) {
+  .footer {
+    max-width: 100vw;
+    margin: 40px auto 0 auto;
+  }
+
+  .footer-intro {
+    display: none;
+  }
+
+  .marquee {
+    display: none;
+  }
+
+  .connect-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: unset;
+    bottom: 40px;
+    left: 4.6%;
+    mix-blend-mode: difference;
+    gap: 8px;
+    z-index: 5;
+    margin-bottom: 40px;
+  }
+
+  .light-dark-toggle {
+    display: none;
+  }
 }

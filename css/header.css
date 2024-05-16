@@ -128,3 +128,9 @@
 .main-menu li:hover a::after {
   opacity: 1;
 }
+
+@media (width < 780px) {
+  .header {
+    display: none;
+  }
+}

@@ -47,6 +47,8 @@
         </div>
         <h2 class="subtitle">Hi, I'm Josimo</h2>
       </div>
+
+      <h1 class="mobile-h1">Hi, Thanks for visiting! Please view it on desktop for a better experience.</h1>
     </main>
 
     <section class="work" id="work" aria-label="Work">
@@ -77,40 +79,39 @@
       <div class="marquee" data-anima="line">
         <ul class="marquee-content">
           <li>—</li>
-          <li><a href="" data-hover>Let's collaborate</a></li>
+          <li><a href="" data-hover data-mail>Let's collaborate</a></li>
           <li>—</li>
-          <li><a href="" data-hover>Let's Talk</a></li>
+          <li><a href="" data-hover data-mail>Let's Talk</a></li>
           <li>—</li>
-          <li><a href="" data-hover>Say Hello</a></li>
+          <li><a href="" data-hover data-mail>Say Hello</a></li>
         </ul>
 
         <ul class="marquee-content">
           <li>—</li>
-          <li><a href="" data-hover>Let's collaborate</a></li>
+          <li><a href="" data-hover data-mail>Let's collaborate</a></li>
           <li>—</li>
-          <li><a href="" data-hover>Let's Talk</a></li>
+          <li><a href="" data-hover data-mail>Let's Talk</a></li>
           <li>—</li>
-          <li><a href="" data-hover>Say Hello</a></li>
+          <li><a href="" data-hover data-mail>Say Hello</a></li>
         </ul>
       </div>
 
       <ul class="connect-menu">
         <li>
           <a href="https://www.linkedin.com/in/josimolopes/" target="_blank" data-hover data-magnet="target">linkedin</a>
-          <!-- <img src="/img/linkedin-outlined-2.svg" width="25" height="25" /> -->
         </li>
         <li>
           <a href="https://github.com/JosimoLopes" target="_blank" data-hover data-magnet="target">github</a>
-          <!-- <img src="/img/githuboutlined.svg" alt="GitHub" width="25" height="25" /> -->
         </li>
         <li>
           <a href="https://www.instagram.com/lopesjosimo/" target="_blank" data-hover data-magnet="target">instagram</a>
-          <!-- <img src="/img/instagramoutlined.svg" alt="Instagram" width="25" height="25" /> -->
         </li>
       </ul>
 
-      <a href="" class="email" data-note="Available for work">joe.lopes@outlook.com</a>
+      <a href="mailto:" class="email" data-note="Available for work" target="_blank">joe.lopes@outlook<b>josimolopes</b>.com</a>
+
       <p class="copy">© 2024 Josimo Lopes</p>
+
       <div class="light-dark-toggle" data-hover data-toggle="light-dark"></div>
     </footer>
 
@@ -118,5 +119,23 @@
 
     <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
     <script type="module" src="/js/script.js"></script>
+    <script>
+      const emailElements = document.querySelectorAll('a[href^="mailto:"]');
+      const emailElementsMarquee = document.querySelectorAll("[data-mail]");
+
+      const user = "joe.lopes";
+      const domain = "outlook.com";
+
+      emailElementsMarquee.forEach((el) => {
+        el.setAttribute("href", `mailto:${user}@${domain}`);
+      });
+
+      window.addEventListener("load", (e) => {
+        emailElements.forEach((el) => {
+          console.log(el.innerText);
+          el.href = el.href + el.innerText;
+        });
+      });
+    </script>
   </body>
 </html>

@@ -46,7 +46,7 @@
   }
 }
 
-@media (width < 760px) {
+@media (width < 780px) {
   .custom-cursor.active {
     display: none;
   }
