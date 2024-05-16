@@ -1,11 +1,11 @@
 .intro {
   display: grid;
-  max-width: 100vw !important;
-  overflow: hidden !important;
-  height: 100vh;
 }
 
 .intro-grid {
+  max-width: 100vw !important;
+  overflow: hidden !important;
+  height: 100vh;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: repeat(3, 1fr);
@@ -27,7 +27,7 @@
   font-size: 13rem;
   line-height: 0.73;
   letter-spacing: -0.7rem;
-  color: var(--pure-white);
+  color: var(--text-color-1);
   user-select: none;
   padding: 0;
   margin: 0;
@@ -72,19 +72,20 @@
   content: "";
   display: inline-block;
   position: absolute;
-  background: var(--dark-black);
+  background: var(--bg-color);
   width: 101%;
   height: 220px;
   left: 0;
   bottom: -225px;
-  z-index: 2;
-  animation: remove 1s forwards;
-  animation-delay: 1s;
+  z-index: 3;
+  mix-blend-mode: var(--blend-mode);
+  animation: remove 0s forwards;
+  animation-delay: 2s;
 }
 
 @keyframes remove {
   to {
-    display: none;
+    opacity: 0;
   }
 }
 
@@ -138,8 +139,8 @@
   font-weight: 900;
   font-size: 2.5rem;
   align-self: end;
-  color: var(--dark-black);
-  mix-blend-mode: multiply;
+  color: var(--bg-color);
+  mix-blend-mode: var(--intro-sub-blend);
   z-index: 11;
   margin-left: 10px;
 }

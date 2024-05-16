@@ -7,11 +7,12 @@
 }
 
 .footer-intro {
-  color: var(--pure-white);
+  color: var(--text-color-1);
   text-transform: capitalize;
   white-space: nowrap;
   margin-bottom: -8px;
   margin: 0 auto -8px auto;
+  font-weight: var(--font-weight-1);
 }
 
 .marquee {
@@ -29,7 +30,7 @@
   position: absolute;
   width: 90vw;
   height: 2px;
-  background: var(--dark-gray);
+  background: var(--text-color-4);
   bottom: 0;
   left: 5%;
   transform: scaleX(0);
@@ -54,13 +55,13 @@
 }
 
 .marquee-content li {
-  color: var(--pure-white);
+  color: var(--text-color-1);
   font-size: 8rem;
   font-weight: 800;
 }
 
 .marquee-content a {
-  color: var(--pure-white);
+  color: var(--text-color-1);
   font-size: 10rem;
   text-transform: uppercase;
   font-weight: 800;
@@ -71,8 +72,8 @@
 
 .marquee-content a:hover {
   color: transparent;
-  -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color: var(--pure-white);
+  -webkit-text-stroke-width: var(--text-stroke-links);
+  -webkit-text-stroke-color: var(--text-color-1);
 }
 
 @keyframes scroll {
@@ -92,21 +93,55 @@
   bottom: 40px;
   left: 4.6%;
   mix-blend-mode: difference;
-  gap: 4px;
+  gap: 8px;
   z-index: 5;
 }
 
 .connect-menu li {
   display: block;
+  position: relative;
+  opacity: 0;
+  animation: con-menu-fade-in var(--animation-duration) var(--transition-easing) forwards;
+  animation-delay: 1s;
+}
+
+.connect-menu li:nth-child(1) {
+  animation-delay: 1.4s;
+}
+
+.connect-menu li:nth-child(2) {
+  animation-delay: 1.2s;
+}
+
+.connect-menu li:nth-child(3) {
+  animation-delay: 1s;
+}
+
+@keyframes con-menu-fade-in {
+  to {
+    opacity: 1;
+  }
 }
 
 .connect-menu a {
   display: block;
-  color: var(--pure-white);
+  color: var(--with-blend-mode);
   cursor: pointer;
   font-weight: 600;
   padding: 5px;
   transition: transform 0.3s cubic-bezier(0.3, 1, 0.7, 1);
+}
+
+.connect-menu li:nth-child(1) a {
+  animation-delay: 0s;
+}
+
+.connect-menu li:nth-child(2) a {
+  animation-delay: 0.2s;
+}
+
+.connect-menu li:nth-child(3) a {
+  animation-delay: 0.4s;
 }
 
 .connect-menu img {
@@ -114,20 +149,21 @@
 }
 
 .connect-menu a:hover {
-  color: var(--light-gray);
+  color: var(--with-blend-mode);
 }
 
 .email {
   display: block;
-  color: var(--pure-white);
+  color: var(--text-color-1);
   font-size: 1.5rem;
   margin: 0 auto 4px auto;
   transition-duration: var(--transition-duration);
   position: relative;
+  font-weight: var(--font-weight-1);
 }
 
 .email:hover {
-  color: var(--light-gray);
+  color: var(--text-color-3);
 }
 
 .email::after {
@@ -166,4 +202,46 @@
   font-weight: 600;
   margin: 0 auto 8px auto;
   position: relative;
+}
+
+.light-dark-toggle {
+  z-index: 4;
+  position: fixed;
+  background-color: var(--with-blend-mode);
+  width: 18px;
+  height: 30px;
+  border-radius: 50px;
+  right: 40px;
+  bottom: 40px;
+  mix-blend-mode: difference;
+  transition-property: transform;
+  transition-duration: var(--transition-duration);
+  will-change: transform;
+  cursor: pointer;
+}
+
+.light-dark-toggle:hover {
+  transform: scale(1.2);
+}
+
+.light-dark-toggle::after {
+  content: "";
+  display: inline-block;
+  background-color: var(--with-blend-mode-black);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-easing);
+}
+
+.light-dark-toggle.active {
+  background: var(--with-blend-mode);
+}
+
+.light-dark-toggle.active::after {
+  transform: translateY(12px);
 }
