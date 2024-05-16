@@ -162,6 +162,10 @@
   font-weight: var(--font-weight-1);
 }
 
+.email b {
+  display: none;
+}
+
 .email:hover {
   color: var(--text-color-3);
 }
