@@ -18,13 +18,8 @@
   position: fixed;
 }
 
-.custom-cursor.active.scale {
-  transform: scale(26);
-  background: #fff;
-}
-
 .custom-cursor.active.scale-link {
-  transform: scale(2.5);
+  transform: scale(3.5);
   background: #fff;
 }
 

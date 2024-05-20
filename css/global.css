@@ -5,6 +5,7 @@
   --text-color-4: #1a1a1a;
   --thumb-scroll: #1a1a1a;
   --with-blend-mode: #fff;
+  --with-blend-mode-2: #fff;
   --with-blend-mode-black: #000;
   --text-color-effect: rgba(255, 255, 255, 0.4);
   --bg-color: #000;
@@ -14,13 +15,13 @@
   --transition-easing: cubic-bezier(0.5, 0, 0.5, 1);
   --text-stroke-logo: 0.04rem;
   --text-stroke-links: 0.05rem;
-  --blend-mode: multiply;
   --font-weight-1: 300;
   --font-weight-2: 600;
   --font-weight-3: 700;
   --font-weight-4: 800;
   --font-weight-5: 900;
   --intro-sub-blend: multiply;
+
   transition-property: background-color var(--transition-duration);
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-easing);
@@ -33,10 +34,10 @@
   --text-color-4: #000;
   --thumb-scroll: #818181;
   --with-blend-mode: #fff;
+  --with-blend-mode-2: #000;
   --with-blend-mode-black: #000;
   --text-color-effect: rgba(0, 0, 0, 0.5);
   --text-stroke-links: 0.09rem;
-  --blend-mode: luminosity;
   --bg-color: #fff;
   --open-green: #21a179;
   --font-weight-1: 600;
@@ -45,30 +46,8 @@
   --intro-sub-blend: light;
 }
 
-/* @media (prefers-color-scheme: light) {
-  :root {
-    --text-color-1: #000;
-    --text-color-2: #1a1a1a;
-    --text-color-3: #818181;
-    --text-color-4: #000;
-    --thumb-scroll: #818181;
-    --with-blend-mode: #fff;
-    --with-blend-mode-black: #000;
-    --text-color-effect: rgba(0, 0, 0, 0.5);
-    --text-stroke-links: 0.09rem;
-    --blend-mode: light;
-    --bg-color: #fff;
-    --open-green: #21a179;
-    --font-weight-1: 600;
-    --font-weight-2: 800;
-    --font-weight-3: 900;
-    --intro-sub-blend: light;
-  }
-} */
-
 * {
   box-sizing: border-box;
-  /* border: 1px solid lightcoral; */
 }
 
 ::-webkit-scrollbar {
@@ -89,10 +68,9 @@ body {
   padding: 0;
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
-  color: var(--text-color-1);
   background: var(--bg-color);
-  overflow: overlay;
   transition: background-color var(--transition-duration) var(--transition-easing);
+  overflow: hidden;
 }
 
 h1,

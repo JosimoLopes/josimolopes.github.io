@@ -1,50 +1,31 @@
 .about {
-  max-width: 90vw;
-  margin: 250px auto 370px auto;
+  max-width: 100vw;
+  margin-top: -100px;
   position: relative;
+  padding: 200px 0;
 }
 
 .about .about-title {
   color: var(--text-color-1);
+  margin: 0 auto;
   margin-bottom: 40px;
   text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: var(--font-weight-2);
+  width: 90vw;
 }
 
-.about .about-text {
-  display: inline;
-  font-size: clamp(0.8rem, 3vw, 2rem);
+.about-text {
+  max-width: 90vw;
+  display: block;
+  margin: 0 auto;
+  color: var(--text-color-1);
+  font-size: clamp(0.8rem, 5vw, 3rem);
   text-transform: uppercase;
   font-weight: 600;
-  user-select: none;
   letter-spacing: 0.8px;
-  color: var(--text-color-effect);
-  background-clip: text;
-  background-repeat: no-repeat;
-  background-size: 0% 100%;
-  background-image: linear-gradient(90deg, var(--text-color-1), var(--text-color-1));
-  animation: scroll-reveal linear forwards;
-  animation-timeline: view();
-  animation-range: cover 10vh 70vh;
-}
-
-@keyframes scroll-reveal {
-  to {
-    background-size: 100% 100%;
-  }
-}
-
-@keyframes img-scale {
-  to {
-    transform: scale(1);
-  }
-}
-
-@keyframes img-scale {
-  to {
-    transform: scale(1);
-  }
+  animation: about-slide-up linear forwards;
+  animation-timeline: scroll();
 }
 
 @media (width < 1050px) {
@@ -54,7 +35,4 @@
 }
 
 @media (width < 780px) {
-  .about {
-    display: none;
-  }
 }
