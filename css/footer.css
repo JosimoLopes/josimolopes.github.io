@@ -1,6 +1,6 @@
 .footer {
   max-width: 100vw;
-  margin: 0 auto 0 auto;
+  margin: 200px auto 0 auto;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -247,12 +247,9 @@
     margin: 40px auto 0 auto;
   }
 
-  .footer-intro {
-    display: none;
-  }
-
-  .marquee {
-    display: none;
+  .marquee-content a,
+  .marquee-content li {
+    font-size: 6rem;
   }
 
   .connect-menu {
@@ -269,6 +266,25 @@
   }
 
   .light-dark-toggle {
+    display: none;
+  }
+}
+
+@media (width < 630px) {
+  .marquee {
+    display: none;
+  }
+
+  .footer-intro-mobile {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-color-1);
+    max-width: 90vw;
+    margin: 50px auto 250px auto;
+    text-transform: uppercase;
+  }
+
+  .footer-intro {
     display: none;
   }
 }

@@ -97,7 +97,4 @@
 }
 
 @media (width < 780px) {
-  .header {
-    display: none;
-  }
 }
