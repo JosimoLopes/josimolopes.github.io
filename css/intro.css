@@ -1,6 +1,6 @@
 .intro-grid {
   max-width: 100vw;
-  height: 100vh;
+  max-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: repeat(3, 1fr);
@@ -8,26 +8,28 @@
 }
 
 .intro-load {
-  overflow: hidden;
+  display: block;
+  /* overflow: hidden; */
   position: absolute;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
+  width: 100vw;
+  height: 100vh;
   background: var(--bg-color);
   bottom: 52px;
   right: 41px;
   z-index: 4;
-  transform: scale(300);
+}
+
+.intro-load.remove {
   animation-name: load-scale;
-  animation-duration: 1s;
-  animation-timing-function: var(--transition-easing);
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
-  animation-delay: 2s;
+  transform-origin: top;
 }
 
 @keyframes load-scale {
   to {
-    transform: scale(0);
+    opacity: 0;
   }
 }
 
@@ -46,7 +48,7 @@
 
 @keyframes para-effect {
   to {
-    transform: translateY(500px);
+    transform: translateY(600px);
     opacity: 0;
   }
 }
@@ -111,7 +113,7 @@
   font-size: 8rem;
   mix-blend-mode: difference;
   top: 40vh;
-  left: 8vw;
+  left: 40vh;
   z-index: 5;
   opacity: 0;
   animation-name: subtitle-fade-in;
@@ -148,8 +150,8 @@
 
   .subtitle {
     font-size: 6.5rem;
-    top: 42vh;
-    left: 7vw;
+    /* top: 42vh;
+    left: 7vw; */
   }
 }
 
@@ -171,7 +173,6 @@
   .subtitle {
     font-size: 5rem;
     top: 44vh;
-    left: 8vw;
   }
 }
 
@@ -182,7 +183,6 @@
 
   .subtitle {
     font-size: 4.5rem;
-    left: 9vw;
   }
 }
 
@@ -193,19 +193,24 @@
 
   .subtitle {
     font-size: 3.5rem;
-    left: 11vw;
+    top: 40vh;
+    left: 30vw;
   }
 }
 
 @media (width < 770px) {
+  .intro {
+    margin-top: 100px;
+  }
+
   .title-character {
     font-size: 6rem;
   }
 
   .subtitle {
     font-size: 2.5rem;
-    top: 41vh;
-    left: 13vw;
+    top: 45vh;
+    left: 28vw;
   }
 
   @keyframes para-effect {
@@ -223,8 +228,8 @@
 
   .subtitle {
     font-size: 2.5rem;
-    top: 37vh;
-    left: 8vw;
+    top: 33vh;
+    left: 20vw;
   }
 
   .first-line {

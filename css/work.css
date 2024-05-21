@@ -1,5 +1,6 @@
 .work {
-  margin: -120px auto 0 auto;
+  display: none;
+  margin: -100px auto 0 auto;
   position: relative;
   background: var(--bg-color);
   padding: 300px 0;
@@ -7,6 +8,10 @@
   transition-property: background-color var(--transition-duration);
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-easing);
+}
+
+.work.active {
+  display: block;
 }
 
 .work-container {
@@ -74,7 +79,7 @@
   white-space: nowrap;
   margin-left: 1px;
   display: inline-block;
-  transform: translateX(60px);
+  transform: translateX(40px);
   animation: worklink-slide var(--transition-easing) forwards;
   animation-timeline: view();
   animation-range: cover 1vh 40vh;
@@ -129,18 +134,18 @@
 /* starts media query */
 
 @media (width < 1440px) {
-  .work {
-    margin-top: -160px;
-  }
+  /* .work {
+    margin-top: -100px;
+  } */
 
   .work-container a {
     font-size: 6.5rem;
   }
 }
 
-@media (width < 1350px) {
+@media (width < 1370px) {
   .work {
-    margin-top: -200px;
+    margin-top: -120px;
   }
 
   .work-container a {
@@ -155,9 +160,9 @@
 }
 
 @media (width < 1140px) {
-  .work {
+  /* .work {
     margin-top: -240px;
-  }
+  } */
 
   .work-container a {
     font-size: 5rem;
@@ -207,6 +212,10 @@
     font-size: 3.5rem;
   }
 
+  .work-container a {
+    transform: translateX(20px);
+  }
+
   .work-container .work-year {
     font-size: 0.6rem;
     font-size: 500;
@@ -219,7 +228,7 @@
 
 @media (width < 780px) {
   .work {
-    margin-top: -300px;
+    padding-top: 500px;
   }
 
   .work-container a {
@@ -236,9 +245,13 @@
 }
 
 @media (width < 570px) {
-  .work {
+  /* .work {
     margin-top: -300px;
     overflow: hidden;
+  } */
+
+  .work-container a {
+    transform: translateX(20px);
   }
 
   .work-container a {

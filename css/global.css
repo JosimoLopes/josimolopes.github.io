@@ -70,7 +70,6 @@ body {
   font-size: 1rem;
   background: var(--bg-color);
   transition: background-color var(--transition-duration) var(--transition-easing);
-  overflow: hidden;
 }
 
 h1,

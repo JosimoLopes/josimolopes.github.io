@@ -26,6 +26,7 @@
     </header>
 
     <main class="intro" id="intro">
+      <div class="intro-load" data-preload></div>
       <div class="intro-grid">
         <div class="intro-title-container" data-hover>
           <div class="first-line" aria-label="Front-End">
@@ -35,10 +36,9 @@
         </div>
       </div>
       <h2 class="subtitle" data-magnet="target" data-hover>Hi, I'm Josimo</h2>
-      <div class="intro-load"></div>
     </main>
 
-    <section class="work" id="work" aria-label="Work">
+    <section class="work" id="work" aria-label="Work" data-load>
       <h2 class="work-section-title">Recent Work</h2>
       <div class="work-items" id="work">
         <div class="work-container" data-anima="line">
@@ -56,12 +56,12 @@
       </div>
     </section>
 
-    <section class="about" id="about" aria-label="About">
+    <section class="about" id="about" aria-label="About" data-load>
       <h2 class="about-title">About Me</h2>
       <p class="about-text">I'm a passionate front-end developer with a knack for crafting beautiful and intuitive web experiences. I bring a creative eye to UI and digital product design, ensuring every element is both visually stunning and thoughtfully implemented. Accuracy and transparency are paramount in my work – well-made websites require dedication, empathy for the user, and a laser focus on delivering exceptional results.</p>
     </section>
 
-    <footer class="footer" id="contact">
+    <footer class="footer" id="contact" data-load>
       <p class="footer-intro">Got a question, have a proposal to discuss, or want to collaborate? Reach out!</p>
       <p class="footer-intro-mobile" aria-hidden="true">Let's work together, Reach Out!</p>
       <div class="marquee" data-anima="line">
@@ -107,23 +107,5 @@
 
     <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
     <script type="module" src="/js/script.js"></script>
-    <script>
-      const emailElements = document.querySelectorAll('a[href^="mailto:"]');
-      const emailElementsMarquee = document.querySelectorAll("[data-mail]");
-
-      const user = "joe.lopes";
-      const domain = "outlook.com";
-
-      emailElementsMarquee.forEach((el) => {
-        el.setAttribute("href", `mailto:${user}@${domain}`);
-      });
-
-      window.addEventListener("load", (e) => {
-        emailElements.forEach((el) => {
-          console.log(el.innerText);
-          el.href = el.href + el.innerText;
-        });
-      });
-    </script>
   </body>
 </html>

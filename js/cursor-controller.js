@@ -23,12 +23,7 @@ export default function initCursor() {
 
   function handleMouseEnter(e) {
     isHovering = true;
-
-    if (e.currentTarget.classList.contains("intro-title-container")) {
-      cursor.classList.add("scale");
-    } else {
-      cursor.classList.add("scale-link");
-    }
+    cursor.classList.add("scale");
   }
 
   const handleMouseLeave = () => {
