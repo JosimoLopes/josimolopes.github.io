@@ -2,8 +2,12 @@
   max-width: 100vw;
   margin: 200px auto 0 auto;
   position: relative;
-  display: flex;
+  display: none;
   flex-direction: column;
+}
+
+.footer.active {
+  display: flex;
 }
 
 .footer-intro {
@@ -109,15 +113,15 @@
 }
 
 .connect-menu li:nth-child(1) {
-  animation-delay: 2.2s;
+  animation-delay: 1.2s;
 }
 
 .connect-menu li:nth-child(2) {
-  animation-delay: 2.4s;
+  animation-delay: 1.4s;
 }
 
 .connect-menu li:nth-child(3) {
-  animation-delay: 2.6s;
+  animation-delay: 1.6s;
 }
 
 @keyframes con-menu-fade-in {
@@ -241,6 +245,10 @@
   transform: translateY(12px);
 }
 
+.footer-intro-mobile {
+  display: none;
+}
+
 @media (width < 780px) {
   .footer {
     max-width: 100vw;
@@ -276,6 +284,7 @@
   }
 
   .footer-intro-mobile {
+    display: block;
     font-size: 3rem;
     font-weight: 700;
     color: var(--text-color-1);
