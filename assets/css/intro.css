@@ -79,15 +79,27 @@
   }
 }
 
+.sub-container {
+  overflow: hidden;
+  width: fit-content;
+  height: fit-content;
+  border: 1px solid seagreen;
+}
+
 .subtitle {
   --transition-duration: 0.5s;
+  padding-left: 100px;
   color: #fff;
+  display: flex;
+  align-items: center;
   position: absolute;
   text-transform: uppercase;
   font-size: 8rem;
   mix-blend-mode: difference;
-  top: 40vh;
-  left: 40vh;
+  width: 99%;
+  height: 99%;
+  top: 0;
+  left: 0;
   z-index: 5;
   opacity: 0;
   animation-name: subtitle-fade-in;
@@ -95,7 +107,6 @@
   animation-timing-function: var(--transition-easing);
   animation-fill-mode: forwards;
   transition: transform var(--transition-duration) cubic-bezier(0.3, 1, 0.7, 1);
-  /* animation-delay: 2; */
 }
 
 @keyframes subtitle-fade-in {
@@ -113,7 +124,7 @@
 
   .subtitle {
     font-size: 7rem;
-    top: 41vh;
+    /* top: 41vh; */
   }
 }
 
@@ -146,7 +157,7 @@
 
   .subtitle {
     font-size: 5rem;
-    top: 44vh;
+    /* top: 44vh; */
   }
 }
 
@@ -167,8 +178,8 @@
 
   .subtitle {
     font-size: 3.5rem;
-    top: 45vh;
-    left: 30vw;
+    /* top: 45vh; */
+    /* left: 30vw; */
   }
 }
 
@@ -183,8 +194,8 @@
 
   .subtitle {
     font-size: 2.5rem;
-    top: 36vh;
-    left: 28vw;
+    /* top: 36vh; */
+    /* left: 28vw; */
   }
 
   @keyframes para-effect {
@@ -202,8 +213,8 @@
 
   .subtitle {
     font-size: 2.5rem;
-    top: 23vh;
-    left: 20vw;
+    /* top: 23vh; */
+    /* left: 20vw; */
   }
 
   .first-line {

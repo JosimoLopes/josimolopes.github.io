@@ -5,7 +5,7 @@
   margin: 40px auto;
   position: fixed;
   inset: 0;
-  z-index: 5;
+  z-index: 6;
   justify-content: space-between;
   background-color: transparent;
   mix-blend-mode: difference;

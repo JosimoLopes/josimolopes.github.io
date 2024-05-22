@@ -1,5 +1,5 @@
 .light-dark-toggle {
-  z-index: 4;
+  z-index: 6;
   position: fixed;
   background-color: var(--with-blend-mode);
   width: 18px;
