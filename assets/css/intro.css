@@ -79,13 +79,6 @@
   }
 }
 
-.sub-container {
-  overflow: hidden;
-  width: fit-content;
-  height: fit-content;
-  border: 1px solid seagreen;
-}
-
 .subtitle {
   --transition-duration: 0.5s;
   padding-left: 100px;
@@ -115,8 +108,6 @@
   }
 }
 
-/* Start Media Query */
-
 @media (width < 1560px) {
   .title-character {
     font-size: 15rem;
@@ -124,7 +115,6 @@
 
   .subtitle {
     font-size: 7rem;
-    /* top: 41vh; */
   }
 }
 
@@ -135,8 +125,6 @@
 
   .subtitle {
     font-size: 6.5rem;
-    /* top: 42vh;
-    left: 7vw; */
   }
 }
 
@@ -157,7 +145,6 @@
 
   .subtitle {
     font-size: 5rem;
-    /* top: 44vh; */
   }
 }
 
@@ -178,8 +165,6 @@
 
   .subtitle {
     font-size: 3.5rem;
-    /* top: 45vh; */
-    /* left: 30vw; */
   }
 }
 
@@ -194,8 +179,6 @@
 
   .subtitle {
     font-size: 2.5rem;
-    /* top: 36vh; */
-    /* left: 28vw; */
   }
 
   @keyframes para-effect {
@@ -213,8 +196,6 @@
 
   .subtitle {
     font-size: 2.5rem;
-    /* top: 23vh; */
-    /* left: 20vw; */
   }
 
   .first-line {
