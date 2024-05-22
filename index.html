@@ -6,7 +6,7 @@
     <title>Josimo Lopes</title>
     <meta name="description" content="Front-end developer with a knack for crafting beautiful and intuitive web experiences." />
 
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,29 +16,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <header class="header">
+    <header class="header" data-section>
       <a href="#intro" class="logo" data-hover data-magnet="target">jos<br />imo<br />lop<br />es</a>
-      <ul class="main-menu">
+
+      <button data-menu="button" aria-expanded="false" aria-controls="menu"></button>
+
+      <ul class="main-menu" data-menu="main">
         <li style="--i: 0"><a href="#work" data-link="work" data-hover data-magnet="target">work</a></li>
         <li style="--i: 1"><a href="#about" data-link="about" data-hover data-magnet="target">about</a></li>
         <li style="--i: 2"><a href="#contact" data-link="contact" data-hover data-magnet="target">contact</a></li>
       </ul>
     </header>
 
-    <main class="intro" id="intro">
-      <div class="intro-load" data-preload></div>
+    <main class="intro" id="intro" data-section>
+      <div class="page-preload" data-preload></div>
       <div class="intro-grid">
-        <div class="intro-title-container" data-hover>
+        <h2 class="subtitle" data-magnet="target" data-hover>Hi, I'm Josimo</h2>
+        <div class="intro-title-container">
           <div class="first-line" aria-label="Front-End">
             <div class="title-character">Front-End</div>
           </div>
           <div class="second-line title-character">Developer</div>
         </div>
       </div>
-      <h2 class="subtitle" data-magnet="target" data-hover>Hi, I'm Josimo</h2>
     </main>
 
-    <section class="work" id="work" aria-label="Work" data-load>
+    <section class="work" id="work" aria-label="Work" data-load data-section>
       <h2 class="work-section-title">Recent Work</h2>
       <div class="work-items" id="work">
         <div class="work-container" data-anima="line">
@@ -56,14 +59,13 @@
       </div>
     </section>
 
-    <section class="about" id="about" aria-label="About" data-load>
+    <section class="about" id="about" aria-label="About" data-load data-section>
       <h2 class="about-title">About Me</h2>
       <p class="about-text">I'm a passionate front-end developer with a knack for crafting beautiful and intuitive web experiences. I bring a creative eye to UI and digital product design, ensuring every element is both visually stunning and thoughtfully implemented. Accuracy and transparency are paramount in my work – well-made websites require dedication, empathy for the user, and a laser focus on delivering exceptional results.</p>
     </section>
 
-    <footer class="footer" id="contact" data-load>
+    <footer class="footer" id="contact" data-load data-section>
       <p class="footer-intro">Got a question, have a proposal to discuss, or want to collaborate? Reach out!</p>
-      <p class="footer-intro-mobile" aria-hidden="true">Let's work together, Reach Out!</p>
       <div class="marquee" data-anima="line">
         <ul class="marquee-content">
           <li>—</li>
@@ -84,7 +86,7 @@
         </ul>
       </div>
 
-      <ul class="connect-menu">
+      <ul class="social-links">
         <li>
           <a href="https://www.linkedin.com/in/josimolopes/" target="_blank" data-hover data-magnet="target" style="--i: 0">linkedin</a>
         </li>

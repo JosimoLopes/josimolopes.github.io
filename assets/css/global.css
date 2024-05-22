@@ -96,7 +96,7 @@ a {
   text-decoration: none;
 }
 
-@media (width > 760px) {
+@media (width > 780px) {
   * {
     cursor: none;
   }

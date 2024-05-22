@@ -10,7 +10,7 @@
   display: block;
 }
 
-.about .about-title {
+.about-title {
   color: var(--text-color-1);
   margin: 0 auto;
   margin-bottom: 40px;
@@ -33,7 +33,7 @@
 
 @media (width < 1350px) {
   .about-text {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
   }
 }
 
@@ -43,9 +43,22 @@
   }
 
   .about-text {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 
 @media (width < 780px) {
+  .about {
+    overflow: hidden;
+  }
+
+  .about-text {
+    font-size: 1.4rem;
+  }
+}
+
+@media (width < 570px) {
+  .about-text {
+    font-size: 1.25rem;
+  }
 }

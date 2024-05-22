@@ -25,6 +25,6 @@
 
 @media (width < 780px) {
   .custom-cursor.active {
-    /* display: none; */
+    display: none;
   }
 }
