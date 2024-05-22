@@ -31,7 +31,7 @@
   letter-spacing: 0.8px;
 }
 
-@media (width < 1350px) {
+@media (width < 1370px) {
   .about-text {
     font-size: 2.25rem;
   }
