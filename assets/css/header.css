@@ -44,7 +44,7 @@
 }
 
 .main-menu li {
-  --delay: 2s;
+  --delay: 3s;
   opacity: 0;
   animation: main-fade-in var(--animation-duration) var(--transition-easing) forwards;
 }

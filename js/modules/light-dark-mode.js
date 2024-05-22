@@ -3,8 +3,6 @@ export default function initLightDarkMode() {
   const root = document.querySelector(":root");
   let getMode = localStorage.getItem("mode");
 
-  console.log(getMode);
-
   function checkMode() {
     if (getMode && getMode === "light") {
       toggle.classList.add("active");
