@@ -7,12 +7,10 @@ export default function initMagnetEffect() {
 
   function handleMouseOut() {
     resetIconPosition(this);
-    // this.removeEventListener("mousemove", handleMouseMove);
   }
 
   function resetIconPosition(el) {
     el.style.transform = "";
-    // el.style.transition = "transform 0.2s";
   }
 
   function handleMouseMove(e) {
@@ -23,6 +21,7 @@ export default function initMagnetEffect() {
     const targetHeight = this.offsetHeight;
     const transX = (x / targetWidth) * (move * 2) - move;
     const transY = (y / targetHeight) * (move * 2) - move;
-    this.style.transform = `translateX(${transX}px) translateY(${transY}px)`;
+
+    if (window.innerWidth > 780) this.style.transform = `translateX(${transX}px) translateY(${transY}px)`;
   }
 }

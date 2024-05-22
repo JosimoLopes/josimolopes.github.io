@@ -29,7 +29,7 @@ export default function initCursor() {
   const handleMouseLeave = () => {
     isHovering = false;
 
-    cursor.classList.remove("scale", "scale-link");
+    cursor.classList.remove("scale");
   };
 
   window.addEventListener("mousemove", handleCursorPosition);

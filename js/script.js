@@ -1,11 +1,12 @@
-import initCursor from "./cursor-controller.js";
-import initLenisSmoothScroll from "./smooth-scroll-controller.js";
-import initScrollToTarget from "./scroll-target-controller.js";
-import initAnimaScroll from "./anima-scroll-controller.js";
-import initMagnetEffect from "./magnet-effect.js";
-import initLightDarkMode from "./light-dark-mode.js";
-import initPreload from "./preload.js";
-import initObfuscation from "./email-obfuscation.js";
+import initCursor from "./modules/cursor-controller.js";
+import initLenisSmoothScroll from "./modules/smooth-scroll-controller.js";
+import initScrollToTarget from "./modules/scroll-target-controller.js";
+import initAnimaScroll from "./modules/anima-scroll-controller.js";
+import initMagnetEffect from "./modules/magnet-effect.js";
+import initLightDarkMode from "./modules/light-dark-mode.js";
+import initPreload from "./modules/preload.js";
+import initObfuscation from "./modules/email-obfuscation.js";
+import initMobileMenu from "./modules/mobile-menu.js";
 
 initCursor();
 initLenisSmoothScroll();
@@ -15,3 +16,4 @@ initMagnetEffect();
 initLightDarkMode();
 initPreload();
 initObfuscation();
+initMobileMenu();
