@@ -44,11 +44,14 @@
   }
 
   [data-menu="button"].active::after {
-    transform: rotate(30deg);
+    transform: rotate(40deg);
+    width: 18px;
   }
 
   [data-menu="button"].active::before {
-    transform: rotate(-30deg);
+    transform: rotate(-40deg);
+    width: 18px;
+
     position: absolute;
   }
 

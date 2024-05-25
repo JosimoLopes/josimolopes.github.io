@@ -13,10 +13,8 @@ export default function initPreload() {
   };
 
   const handleLoad = () => {
-    setTimeout(() => {
-      removeMask();
-      activeSection();
-    }, 2200);
+    removeMask();
+    activeSection();
   };
 
   window.addEventListener("load", handleLoad);
