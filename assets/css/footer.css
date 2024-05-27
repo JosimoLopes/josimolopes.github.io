@@ -32,7 +32,7 @@
 }
 
 .social-links li {
-  --delay: 3s;
+  --delay: 2s;
   display: block;
   position: relative;
   opacity: 0;
@@ -131,10 +131,6 @@
   font-weight: 600;
   margin: 0 auto 8px auto;
   position: relative;
-}
-
-.footer-intro-mobile {
-  display: none;
 }
 
 @media (width < 780px) {

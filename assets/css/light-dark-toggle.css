@@ -14,7 +14,7 @@
   cursor: pointer;
   animation: toggle-fade-in var(--animation-duration) var(--transition-easing) forwards;
   opacity: 0;
-  animation-delay: 3s;
+  animation-delay: 2s;
 }
 
 @keyframes toggle-fade-in {
