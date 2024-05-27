@@ -32,7 +32,7 @@
 }
 
 .social-links li {
-  --delay: 3s;
+  --delay: 2s;
   display: block;
   position: relative;
   opacity: 0;

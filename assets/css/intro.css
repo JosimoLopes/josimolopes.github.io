@@ -54,7 +54,7 @@
   animation-timing-function: var(--transition-easing);
   animation-fill-mode: forwards;
   transform: translateY(-40px);
-  animation-delay: 3s;
+  animation-delay: 4s;
 }
 
 @keyframes title-slide-down {
@@ -70,7 +70,7 @@
   animation-timing-function: var(--transition-easing);
   animation-fill-mode: forwards;
   transform: translateY(40px);
-  animation-delay: 3s;
+  animation-delay: 4s;
 }
 
 @keyframes title-slide-up {
