@@ -19,7 +19,7 @@
   transform: scaleX(0);
 }
 
-.marquee.active::after {
+.marquee.active-line::after {
   animation: line-scroll 1.5s linear forwards;
 }
 

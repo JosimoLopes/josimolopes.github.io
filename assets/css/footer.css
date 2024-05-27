@@ -133,10 +133,6 @@
   position: relative;
 }
 
-.footer-intro-mobile {
-  display: none;
-}
-
 @media (width < 780px) {
   .footer {
     max-width: 100vw;
