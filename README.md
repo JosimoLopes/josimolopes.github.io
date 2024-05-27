@@ -1,6 +1,6 @@
 # Portfolio
 
-Welcome to my personal portfolio site, a single-page application crafted with HTML, CSS, and JavaScript. This site is constantly evolving, so be sure to check back regularly for updates!
+Welcome to my personal portfolio website, a single-page application crafted with HTML, CSS, and JavaScript. This site is constantly evolving, so be sure to check back regularly for updates!
 
 Key Features:
 
