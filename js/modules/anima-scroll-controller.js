@@ -14,7 +14,5 @@ export default function initAnimaScroll() {
     addActive();
   };
 
-  // addActive();
-
   window.addEventListener("scroll", handleScroll);
 }

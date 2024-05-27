@@ -26,6 +26,17 @@
 .work-container:nth-child(2) {
   z-index: 3;
   background-color: var(--bg-color);
+  transition-property: background-color var(--transition-duration);
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-easing);
+}
+
+.work-container:nth-child(3) {
+  z-index: 4;
+  background-color: var(--bg-color);
+  transition-property: background-color var(--transition-duration);
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-easing);
 }
 
 .work-section-title {
