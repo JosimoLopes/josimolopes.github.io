@@ -50,7 +50,7 @@
 
 @keyframes about-slide-up {
   from {
-    transform: translateY(300px);
+    transform: translateY(100px);
     opacity: 0;
   }
 
