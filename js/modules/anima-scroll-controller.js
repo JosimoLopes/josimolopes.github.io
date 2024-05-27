@@ -3,7 +3,7 @@ export default function initAnimaScroll() {
 
   const addActive = () => {
     workElements.forEach((el) => {
-      const elementTop = el.getBoundingClientRect().top - 50;
+      const elementTop = el.getBoundingClientRect().top - 600;
       if (elementTop < 0) {
         el.classList.add("active-line");
       }
@@ -14,7 +14,7 @@ export default function initAnimaScroll() {
     addActive();
   };
 
-  addActive();
+  // addActive();
 
   window.addEventListener("scroll", handleScroll);
 }

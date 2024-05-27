@@ -69,7 +69,7 @@
 }
 
 .work-container.active-line::after {
-  animation: line-scroll 3s linear forwards;
+  animation: line-scroll 1.5s linear forwards;
 }
 
 @keyframes line-scroll {
