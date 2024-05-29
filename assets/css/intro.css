@@ -2,16 +2,14 @@
   max-width: 100vw;
   max-height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: repeat(3, 1fr);
   position: relative;
+  justify-content: center;
 }
 
 .intro-title-container {
-  grid-row: 2;
-  grid-column: 2;
+  grid-row: 3;
   height: fit-content;
-  grid-template-rows: repeat(2, 1fr);
   margin: 0;
   padding: 0;
   animation-name: para-effect;
@@ -30,8 +28,8 @@
 .title-character {
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 16.5rem;
-  line-height: 0.9;
+  font-size: 16.8rem;
+  line-height: 0.85;
   color: var(--text-color-1);
   user-select: none;
   padding: 0;
@@ -39,41 +37,49 @@
   display: inline;
   white-space: nowrap;
   z-index: -50 !important;
+  transition: all 0.4s;
 }
 
 .first-line,
 .second-line {
   display: flex;
   max-height: max-content;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-.first-line {
+.first-line .title-character {
+  --stager: 0.1s;
+  --animation-delay: 0.1s;
   --animation-duration: 1.2s;
-  animation-name: title-slide-down;
+  animation-name: letter-slid-up-2;
   animation-duration: var(--animation-duration);
-  animation-timing-function: var(--transition-easing);
+  animation-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
   animation-fill-mode: forwards;
-  transform: translateY(-40px);
-  animation-delay: 4s;
+  animation-delay: calc(var(--animation-delay) * var(--i));
+  transform: translateY(240px);
 }
 
-@keyframes title-slide-down {
-  to {
+@keyframes letter-slid-up-2 {
+  100% {
     transform: none;
   }
 }
 
-.second-line {
-  --animation-duration: 1.2s;
-  animation-name: title-slide-up;
+.second-line .title-character {
+  --stager: 0.1s;
+  --animation-delay: 0.1s;
+  --animation-duration: 1s;
+  animation-name: letter-slid-up;
   animation-duration: var(--animation-duration);
-  animation-timing-function: var(--transition-easing);
+  animation-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
   animation-fill-mode: forwards;
-  transform: translateY(40px);
-  animation-delay: 4s;
+  transform: translateY(240px);
+  animation-delay: calc(var(--animation-delay) * var(--i));
 }
 
-@keyframes title-slide-up {
+@keyframes letter-slid-up {
   to {
     transform: none;
   }
@@ -115,7 +121,7 @@
 
 @media (width < 1560px) {
   .title-character {
-    font-size: 15rem;
+    font-size: 17rem;
   }
 
   .subtitle {
@@ -125,7 +131,7 @@
 
 @media (width < 1440px) {
   .title-character {
-    font-size: 14rem;
+    font-size: 17rem;
   }
 
   .subtitle {
@@ -135,7 +141,7 @@
 
 @media (width < 1370px) {
   .title-character {
-    font-size: 13rem;
+    font-size: 14.4rem;
   }
 
   .subtitle {

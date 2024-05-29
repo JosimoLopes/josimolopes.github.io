@@ -4,7 +4,6 @@ import initScrollToTarget from "./modules/scroll-target-controller.js";
 import initAnimaScroll from "./modules/anima-scroll-controller.js";
 import initMagnetEffect from "./modules/magnet-effect.js";
 import initLightDarkMode from "./modules/light-dark-mode.js";
-import initPreload from "./modules/preload.js";
 import initObfuscation from "./modules/email-obfuscation.js";
 import initMobileMenu from "./modules/mobile-menu.js";
 
@@ -14,6 +13,5 @@ initScrollToTarget();
 initAnimaScroll();
 initMagnetEffect();
 initLightDarkMode();
-initPreload();
 initObfuscation();
 initMobileMenu();

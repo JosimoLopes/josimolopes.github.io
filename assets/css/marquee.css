@@ -4,7 +4,7 @@
   overflow: hidden;
   user-select: none;
   gap: 2rem;
-  margin-bottom: 300px;
+  margin-bottom: 200px;
 }
 
 .marquee::after {
