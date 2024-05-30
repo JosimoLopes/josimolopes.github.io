@@ -96,6 +96,46 @@ a {
   text-decoration: none;
 }
 
+.section-title-wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+.section-title {
+  max-width: 90vw;
+  margin: 0 auto;
+  color: var(--text-color-1);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: var(--font-weight-2);
+}
+
+.section-title::after {
+  white-space: nowrap;
+  content: "🡦";
+  display: inline-block;
+  margin-left: 8px;
+}
+
+@media (width < 1536px) {
+  .section-title {
+    font-size: 0.9rem;
+  }
+}
+
+@media (width < 1366px) {
+  .section-title {
+    font-size: 0.8rem;
+  }
+}
+
+@media (width < 1280px) {
+  .section-title {
+    font-size: 0.7em;
+  }
+}
+
 @media (width > 780px) {
   * {
     cursor: none;
