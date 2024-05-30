@@ -147,10 +147,6 @@
 }
 
 @media (width < 1370px) {
-  /* .work-container a {
-    font-size: 7rem;
-  } */
-
   .work-i {
     color: var(--text-color-1);
     font-size: 0.8rem;
@@ -207,9 +203,9 @@
 }
 
 @media (width < 860px) {
-  .work-section {
+  /* .work-section {
     margin-top: 400px;
-  }
+  } */
 
   .work-container a {
     font-size: 4rem;
@@ -221,15 +217,15 @@
 }
 
 @media (width < 760px) {
-  .work-section {
+  /* .work-section {
     margin-top: 500px;
-  }
+  } */
 }
 
 @media (width < 580px) {
-  .work-section {
+  /* .work-section {
     margin-top: 700px;
-  }
+  } */
 
   .work-container a {
     font-size: 2rem;
