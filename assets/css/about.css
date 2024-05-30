@@ -51,7 +51,7 @@
 
 .about-text {
   color: var(--text-color-1);
-  font-size: clamp(0.8rem, 3vw, 2.8rem);
+  font-size: clamp(0.8rem, 2.8vw, 2.5rem);
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 0.8px;
