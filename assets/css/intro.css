@@ -196,9 +196,3 @@
     font-size: 4rem;
   }
 }
-
-@media (width < 435px) {
-  .title-character {
-    font-size: 2rem;
-  }
-}
