@@ -12,8 +12,8 @@
   display: inline-block;
   position: absolute;
   width: 90vw;
-  height: 2px;
-  background: var(--text-color-4);
+  height: 1px;
+  background: var(--text-color-1);
   bottom: 0;
   left: 5%;
   transform: scaleX(0);

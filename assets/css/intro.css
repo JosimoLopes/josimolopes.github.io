@@ -119,109 +119,86 @@
   }
 }
 
-@media (width < 1560px) {
+@media (width < 1600px) {
   .title-character {
-    font-size: 17rem;
+    font-size: 16rem;
   }
+}
 
-  .subtitle {
+@media (width < 1520px) {
+  .title-character {
+    font-size: 15rem;
+  }
+}
+
+@media (width < 1420px) {
+  .title-character {
+    font-size: 14rem;
+  }
+}
+
+@media (width < 1330px) {
+  .title-character {
+    font-size: 13rem;
+  }
+}
+
+@media (width < 1240px) {
+  .title-character {
+    font-size: 12rem;
+  }
+}
+
+@media (width < 1150px) {
+  .title-character {
+    font-size: 11rem;
+  }
+}
+
+@media (width < 1050px) {
+  .title-character {
+    font-size: 10rem;
+  }
+}
+
+@media (width < 950px) {
+  .title-character {
+    font-size: 9rem;
+  }
+}
+
+@media (width < 860px) {
+  .title-character {
+    font-size: 8rem;
+  }
+}
+
+@media (width < 760px) {
+  .title-character {
     font-size: 7rem;
   }
 }
 
-@media (width < 1440px) {
+@media (width < 670px) {
   .title-character {
-    font-size: 17rem;
-  }
-
-  .subtitle {
-    font-size: 6.5rem;
-  }
-}
-
-@media (width < 1370px) {
-  .title-character {
-    font-size: 14.4rem;
-  }
-
-  .subtitle {
     font-size: 6rem;
   }
 }
 
-@media (width < 1270px) {
+@media (width < 575px) {
   .title-character {
-    font-size: 12rem;
-  }
-
-  .subtitle {
     font-size: 5rem;
   }
 }
 
-@media (width < 1160px) {
-  .title-character {
-    font-size: 10rem;
-  }
-
-  .subtitle {
-    font-size: 4.5rem;
-  }
-}
-
-@media (width < 960px) {
-  .title-character {
-    font-size: 8rem;
-  }
-
-  .subtitle {
-    font-size: 3.5rem;
-  }
-}
-
-@media (width < 770px) {
-  .intro {
-    margin-top: 100px;
-  }
-
-  .title-character {
-    font-size: 6rem;
-  }
-
-  .subtitle {
-    font-size: 2.5rem;
-  }
-
-  @keyframes para-effect {
-    to {
-      transform: translateY(200px);
-      opacity: 0;
-    }
-  }
-}
-
-@media (width < 570px) {
+@media (width < 480px) {
   .title-character {
     font-size: 4rem;
   }
+}
 
-  .subtitle {
-    font-size: 2.5rem;
-  }
-
-  .first-line {
-    animation-delay: 0s;
-  }
-
-  .second-line {
-    animation-delay: 0s;
-  }
-
-  .intro-title-container {
-    animation: unset;
-  }
-
-  .intro-load {
-    display: none;
+@media (width < 435px) {
+  .title-character {
+    font-size: 2rem;
   }
 }

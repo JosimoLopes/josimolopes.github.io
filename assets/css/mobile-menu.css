@@ -2,11 +2,11 @@
   display: none;
 }
 
-@media (width < 580px) {
+@media (width < 576px) {
   [data-menu="button"] {
     display: block;
-    padding: 14px 24px;
     border: none;
+    padding: 14px 14px;
     right: 0;
     display: flex;
     flex-direction: column;
@@ -14,11 +14,12 @@
     gap: 6px;
     align-items: center;
     cursor: pointer;
-    background-color: var(--with-blend-mode-black);
+    background-color: transparent;
     align-self: start;
     justify-items: end;
-    margin-right: -16px;
+    margin-right: -14px;
     margin-top: -14px;
+    transition: all 0.3s cubic-bezier(0.3, 1, 0.7, 1);
   }
 
   [data-menu="button"]::after {
@@ -27,7 +28,8 @@
     background-color: var(--with-blend-mode);
     width: 22px;
     height: 2px;
-    transition: transform 0.3s;
+    transition: transform 0.2s;
+    position: absolute;
   }
 
   [data-menu="button"]::before {
@@ -36,32 +38,30 @@
     background-color: var(--with-blend-mode);
     width: 22px;
     height: 2px;
-    transition: transform 0.3s;
-  }
-
-  [data-menu="button"].active {
-    padding: 18px 24px;
+    transition: transform 0.2s;
+    position: absolute;
+    top: 8px;
   }
 
   [data-menu="button"].active::after {
-    transform: rotate(40deg);
-    width: 18px;
+    transform: rotate(-40deg);
   }
 
   [data-menu="button"].active::before {
-    transform: rotate(-40deg);
-    width: 18px;
-
-    position: absolute;
+    transform: rotate(40deg);
+    top: 0;
   }
 
   .main-menu {
+    padding-left: 32px;
+    overflow: hidden;
+    display: none;
     position: absolute;
     flex-direction: column;
-    right: 0;
-    padding-top: 40px;
-    display: none;
+    top: 40px;
+    right: -11px;
     animation-delay: unset;
+    transition: all 0.3s;
   }
 
   .main-menu.active {
@@ -72,6 +72,7 @@
     --delay: 0s;
     text-align: end;
     animation-delay: unset;
+    transform: translateY(150px);
   }
 
   .main-menu a {
