@@ -16,18 +16,18 @@
   height: fit-content;
   margin: 0;
   padding: 0;
-  animation-name: para-effect;
+  /* animation-name: para-effect; */
   animation-timing-function: linear;
   animation-fill-mode: forwards;
   animation-timeline: scroll();
 }
 
-@keyframes para-effect {
+/* @keyframes para-effect {
   to {
     transform: translateY(600px);
     opacity: 0;
   }
-}
+} */
 
 .title-character {
   display: flex;
@@ -125,55 +125,55 @@
   }
 }
 
-@media (width < 1600px) {
+@media (width <= 1600px) {
   .title-character {
     font-size: 16rem;
   }
 }
 
-@media (width < 1520px) {
+@media (width <= 1520px) {
   .title-character {
     font-size: 15rem;
   }
 }
 
-@media (width < 1420px) {
+@media (width <= 1420px) {
   .title-character {
     font-size: 14rem;
   }
 }
 
-@media (width < 1330px) {
+@media (width <= 1330px) {
   .title-character {
     font-size: 13rem;
   }
 }
 
-@media (width < 1240px) {
+@media (width <= 1240px) {
   .title-character {
     font-size: 12rem;
   }
 }
 
-@media (width < 1150px) {
+@media (width <= 1150px) {
   .title-character {
     font-size: 11rem;
   }
 }
 
-@media (width < 1050px) {
+@media (width <= 1050px) {
   .title-character {
     font-size: 10rem;
   }
 }
 
-@media (width < 962px) {
+@media (width <= 962px) {
   .title-character {
     font-size: 9rem;
   }
 }
 
-@media (width < 480px) {
+@media (width <= 480px) {
   .title-character {
     font-size: 8rem;
   }
