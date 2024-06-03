@@ -4,22 +4,17 @@
 
 @media (width < 576px) {
   [data-menu="button"] {
-    display: block;
     border: none;
-    padding: 14px 14px;
-    right: 0;
+    display: block;
+    padding: 14px;
     display: flex;
-    flex-direction: column;
     z-index: 10;
-    gap: 6px;
     align-items: center;
     cursor: pointer;
     background-color: transparent;
     align-self: start;
-    justify-items: end;
-    margin-right: -14px;
-    margin-top: -14px;
     transition: all 0.3s cubic-bezier(0.3, 1, 0.7, 1);
+    position: relative;
   }
 
   [data-menu="button"]::after {
@@ -30,6 +25,7 @@
     height: 2px;
     transition: transform 0.2s;
     position: absolute;
+    inset: 35% 12%;
   }
 
   [data-menu="button"]::before {
@@ -40,16 +36,18 @@
     height: 2px;
     transition: transform 0.2s;
     position: absolute;
-    top: 8px;
+    bottom: 35%;
+    left: 12%;
   }
 
   [data-menu="button"].active::after {
     transform: rotate(-40deg);
+    top: 48%;
   }
 
   [data-menu="button"].active::before {
     transform: rotate(40deg);
-    top: 0;
+    bottom: 48%;
   }
 
   .main-menu {
