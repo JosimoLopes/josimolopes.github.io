@@ -16,30 +16,18 @@
   height: fit-content;
   margin: 0;
   padding: 0;
-  /* animation-name: para-effect; */
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-  animation-timeline: scroll();
 }
-
-/* @keyframes para-effect {
-  to {
-    transform: translateY(600px);
-    opacity: 0;
-  }
-} */
 
 .title-character {
   display: flex;
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 16.8rem;
+  font-size: calc(7.5rem + (19 - 7.5) * (100vw - 30rem) / (120 - 30));
   line-height: 0.85;
   color: var(--text-color-1);
   user-select: none;
   padding: 0;
   margin: 0;
-  /* display: inline; */
   white-space: nowrap;
   z-index: -50 !important;
   transition: all 0.4s;
@@ -125,56 +113,20 @@
   }
 }
 
-@media (width <= 1600px) {
+@media (width <= 1400px) {
   .title-character {
-    font-size: 16rem;
+    font-size: calc(7.5rem + (19 - 9) * (100vw - 30rem) / (120 - 30));
   }
 }
 
-@media (width <= 1520px) {
+@media (width <= 1160px) {
   .title-character {
-    font-size: 15rem;
+    font-size: calc(7.5rem + (19 - 11) * (100vw - 30rem) / (120 - 30));
   }
 }
 
-@media (width <= 1420px) {
+@media (width <= 980px) {
   .title-character {
-    font-size: 14rem;
-  }
-}
-
-@media (width <= 1330px) {
-  .title-character {
-    font-size: 13rem;
-  }
-}
-
-@media (width <= 1240px) {
-  .title-character {
-    font-size: 12rem;
-  }
-}
-
-@media (width <= 1150px) {
-  .title-character {
-    font-size: 11rem;
-  }
-}
-
-@media (width <= 1050px) {
-  .title-character {
-    font-size: 10rem;
-  }
-}
-
-@media (width <= 962px) {
-  .title-character {
-    font-size: 9rem;
-  }
-}
-
-@media (width <= 480px) {
-  .title-character {
-    font-size: 8rem;
+    font-size: calc(7.5rem + (19 - 14) * (100vw - 30rem) / (120 - 30));
   }
 }
