@@ -46,6 +46,8 @@
 .marquee-content a {
   color: var(--text-color-1);
   font-size: 10rem;
+  font-size: calc(6rem + (10 - 6) * (100vw - 40rem) / (120 - 40));
+
   text-transform: uppercase;
   font-weight: 800;
   cursor: pointer;
@@ -65,19 +67,5 @@
   }
   to {
     transform: translateX(calc(-100% - 2rem));
-  }
-}
-
-@media (width < 780px) {
-  .marquee-content a,
-  .marquee-content li {
-    font-size: 6rem;
-  }
-}
-
-@media (width < 480px) {
-  .marquee-content a,
-  .marquee-content li {
-    font-size: 5rem;
   }
 }

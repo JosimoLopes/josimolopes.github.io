@@ -51,7 +51,7 @@
 
 .about-text {
   color: var(--text-color-1);
-  font-size: clamp(0.8rem, 2.8vw, 2.5rem);
+  font-size: calc(1rem + (2.5 - 1) * (100vw - 40rem) / (120 - 40));
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 0.8px;
@@ -62,10 +62,4 @@
   .about img {
     display: none;
   }
-}
-
-@media (width < 780px) {
-}
-
-@media (width < 570px) {
 }
