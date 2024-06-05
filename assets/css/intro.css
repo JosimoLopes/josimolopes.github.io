@@ -115,7 +115,7 @@
 
 @media (width <= 780px) {
   .title-character {
-    font-size: calc(8rem + (20 - 8) * (100vw - 20rem) / (120 - 20));
+    font-size: calc(8rem + (20 - 8) * (100vw - 25rem) / (120 - 25));
   }
 
   .title-character {
