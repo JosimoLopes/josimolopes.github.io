@@ -22,7 +22,7 @@
   display: flex;
   text-transform: uppercase;
   font-weight: 600;
-  font-size: calc(7.5rem + (19 - 7.5) * (100vw - 30rem) / (120 - 30));
+  font-size: calc(8rem + (20 - 8) * (100vw - 48rem) / (120 - 48));
   line-height: 0.85;
   color: var(--text-color-1);
   user-select: none;
@@ -113,20 +113,12 @@
   }
 }
 
-@media (width <= 1400px) {
+@media (width <= 780px) {
   .title-character {
-    font-size: calc(7.5rem + (19 - 9) * (100vw - 30rem) / (120 - 30));
+    font-size: calc(8rem + (20 - 8) * (100vw - 20rem) / (120 - 20));
   }
-}
 
-@media (width <= 1160px) {
   .title-character {
-    font-size: calc(7.5rem + (19 - 11) * (100vw - 30rem) / (120 - 30));
-  }
-}
-
-@media (width <= 980px) {
-  .title-character {
-    font-size: calc(7.5rem + (19 - 14) * (100vw - 30rem) / (120 - 30));
+    transform: translateY(0) !important;
   }
 }
