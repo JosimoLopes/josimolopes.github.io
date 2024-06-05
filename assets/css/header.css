@@ -1,14 +1,15 @@
 .header {
-  --animation-duration: 1.2s;
-  width: 90vw;
-  height: fit-content;
   display: flex;
-  margin: 40px auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  --animation-duration: 1.2s;
+  height: fit-content;
+  max-width: 90vw;
+  margin: 32px auto;
   position: fixed;
   inset: 0;
   z-index: 6;
-  justify-content: space-between;
-  background-color: transparent;
   mix-blend-mode: difference;
   transform: translateY(-120px);
   animation-name: nav-slide-down;
@@ -30,23 +31,21 @@
   transition: transform var(--transition-duration) cubic-bezier(0.3, 1, 0.7, 1);
   -webkit-text-stroke-width: var(--text-stroke-logo);
   -webkit-text-stroke-color: var(--with-blend-mode);
-  width: fit-content;
-  height: fit-content;
-  padding: 4px;
+  /* width: fit-content;
+  height: fit-content; */
+  padding: 12px;
   color: transparent;
   font-size: 2rem;
   font-weight: 900;
-  line-height: 1rem;
-  letter-spacing: -0.2rem;
+  line-height: 1.1rem;
+  letter-spacing: -0.1rem;
   cursor: pointer;
-  animation-delay: 1.5s;
 }
 
 .main-menu {
   display: flex;
+  flex-wrap: wrap;
   gap: 24px;
-  padding: 0;
-  margin-top: -12px;
   position: relative;
 }
 
@@ -56,14 +55,14 @@
   animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
   animation-fill-mode: forwards;
   animation-duration: var(--animation-duration);
-  transform: translateY(-60px);
+  transform: translateY(-40px);
 }
 
 .main-menu li:nth-child(2) {
   animation-delay: calc(var(--delay) + 0.15s);
 }
 .main-menu li:nth-child(3) {
-  animation-delay: calc(var(--delay) + 0.3s);
+  animation-delay: calc(var(--delay) + 0.35s);
 }
 
 @keyframes main-slide-down {
@@ -75,21 +74,21 @@
 
 .main-menu a {
   --transition-duration: 0.3s;
-  display: block;
+  display: inline-block;
   font-size: 1rem;
   font-weight: 600;
   text-transform: lowercase;
   position: relative;
   letter-spacing: 4px;
   color: var(--with-blend-mode);
-  padding: 5px 0;
+  padding: 16px 0;
   cursor: pointer;
   transition: transform var(--transition-duration) cubic-bezier(0.3, 1, 0.7, 1);
 }
 
 .main-menu a::after {
   content: "";
-  display: inline-block;
+  display: block;
   background: var(--with-blend-mode);
   width: 8px;
   height: 8px;
