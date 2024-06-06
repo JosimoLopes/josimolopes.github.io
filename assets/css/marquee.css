@@ -39,7 +39,7 @@
 
 .marquee-content li {
   color: var(--text-color-1);
-  font-size: 8rem;
+  font-size: calc(6rem + (10 - 6) * (100vw - 40rem) / (120 - 40));
   font-weight: 800;
 }
 
