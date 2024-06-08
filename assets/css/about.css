@@ -33,7 +33,7 @@
 }
 
 .about-container.active-line::before {
-  animation: line-scroll 1.5s linear forwards;
+  animation: line-scroll 1.5s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
 }
 
 @keyframes line-scroll {
