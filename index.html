@@ -17,21 +17,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <header class="header" data-section>
-      <a href="#intro" class="logo" data-hover data-magnet="target">jos<br />imo<br />lop<br />es</a>
-      <nav aria-label="primary">
-        <ul class="main-menu" data-menu="main">
-          <li style="--i: 0"><a href="#work" data-link="work" data-hover data-magnet="target">work</a></li>
-          <li style="--i: 1"><a href="#about" data-link="about" data-hover data-magnet="target">about</a></li>
-          <li style="--i: 2"><a href="#contact" data-link="contact" data-hover data-magnet="target">contact</a></li>
-        </ul>
-      </nav>
+    <header class="header-bg" data-section>
+      <div class="header">
+        <a href="#intro" class="logo" data-hover data-magnet="target">jos<br />imo<br />lop<br />es</a>
+        <nav aria-label="primary">
+          <ul class="main-menu" data-menu="main">
+            <li style="--i: 0"><a href="#work" data-link="work" data-hover data-magnet="target">work</a></li>
+            <li style="--i: 1"><a href="#about" data-link="about" data-hover data-magnet="target">about</a></li>
+            <li style="--i: 2"><a href="#contact" data-link="contact" data-hover data-magnet="target">contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <main class="intro" id="intro" data-section>
-      <div class="intro-grid">
+    <main class="intro-bg" id="intro" data-section>
+      <div class="intro">
         <div class="intro-title-container">
-          <div class="first-line" aria-label="Front-End">
+          <div class="title-line" aria-label="Front-End">
             <div class="title-character" style="--i: 0">F</div>
             <div class="title-character" style="--i: 1">r</div>
             <div class="title-character" style="--i: 2">o</div>
@@ -42,7 +44,7 @@
             <div class="title-character" style="--i: 7">n</div>
             <div class="title-character" style="--i: 8">d</div>
           </div>
-          <div class="second-line" aria-label="Developer">
+          <div class="title-line" aria-label="Developer">
             <div class="title-character" style="--i: 0">D</div>
             <div class="title-character" style="--i: 1">e</div>
             <div class="title-character" style="--i: 2">v</div>
@@ -63,19 +65,19 @@
           <h2 class="section-title">Work</h2>
         </div>
         <div class="work-link-wrapper">
-          <div class="work-container" data-anima="line">
+          <div class="work-container" data-anima="line" data-src="./assets/images/coopfass.svg">
             <span class="work-i">01</span>
             <p class="work-info">Front-End Development/UI Design</p>
             <a href="https://coopfass.com/" target="_blank" class="work-link" data-hover><span class="work-title">Coopfass</span></a>
           </div>
 
-          <div class="work-container" data-anima="line">
+          <div class="work-container" data-anima="line" data-src="./assets/images/workando.svg">
             <span class="work-i">02</span>
             <p class="work-info">Front & Back-End Development/UI Design</p>
             <a href="https://workando-4017206c08ac.herokuapp.com/users/sign_in" target="_blank" class="work-link" data-hover><span class="work-title">Workando</span></a>
           </div>
 
-          <div class="work-container" data-anima="line">
+          <div class="work-container" data-anima="line" data-src="./assets/images/bikcraft.svg">
             <span class="work-i">03</span>
             <p class="work-info">Front-End Development</p>
             <a href="" class="work-link" data-hover><span class="work-title">Bikcraft</span></a>
@@ -139,7 +141,9 @@
 
     <div class="custom-cursor" data-cursor="custom"></div>
 
+    <img src="" alt="" class="work-img" />
+
     <script defer src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
-    <script defer type="module" src="/js/script.js"></script>
+    <script type="module" src="/js/script.js"></script>
   </body>
 </html>
