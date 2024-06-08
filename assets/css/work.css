@@ -119,6 +119,10 @@
   animation: img-scale 0.3s cubic-bezier(0.19, 1, 0.22, 1) forwards;
 }
 
+.svg-bikcraft path {
+  fill: white;
+}
+
 @keyframes img-scale {
   from {
     transform: scale(0.8);
