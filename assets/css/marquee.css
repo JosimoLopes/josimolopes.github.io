@@ -51,7 +51,7 @@
   border-radius: 50%;
   background: var(--color-00);
   position: absolute;
-  top: 48%;
+  top: 40%;
   right: -124px;
 }
 
@@ -79,7 +79,7 @@
 
 @media (width <= 780px) {
   .marquee ul li::after {
-    width: 4vw;
-    height: 4vw;
+    width: 3.5vw;
+    height: 3.5vw;
   }
 }
