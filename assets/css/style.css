@@ -1,10 +1,18 @@
-@import url(/assets/css/global.css);
+@import url(/assets/css/general.css);
 @import url(/assets/css/header.css);
-@import url(/assets/css/intro.css);
 @import url(/assets/css/cursor.css);
-@import url(/assets/css/work.css);
-@import url(/assets/css/about.css);
-@import url(/assets/css/footer.css);
+@import url(./colors.css);
 @import url(/assets/css/lenis-scroll.css);
 @import url(/assets/css/marquee.css);
 @import url(/assets/css/light-dark-toggle.css);
+
+/* Sections */
+@import url(/assets/css/sections/work.css);
+@import url(/assets/css/sections/about.css);
+@import url(/assets/css/sections/footer.css);
+@import url(/assets/css/sections/intro.css);
+
+/* Components */
+@import url(./components/container.css);
+@import url(/assets/css/components/typography.css);
+@import url(./components/section-title.css);

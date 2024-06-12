@@ -1,29 +1,21 @@
-.header-bg {
+.header {
   position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 6;
+  inset: 0;
+  z-index: 5;
   width: 100%;
   mix-blend-mode: difference;
   height: fit-content;
-  padding: 0;
 }
 
-.header {
+.header-content {
+  --animation-duration: 1.2s;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  --animation-duration: 1.2s;
-  max-width: 91vw;
-  margin: 0 auto;
   padding: 16px 0;
-  box-sizing: border-box;
   transform: translateY(-120px);
-  animation-name: nav-slide-down;
-  animation-duration: var(--animation-duration);
-  animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
-  animation-fill-mode: forwards;
+  animation: nav-slide-down var(--animation-duration) cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
   animation-delay: 1.7s;
   opacity: 0;
 }
@@ -37,8 +29,8 @@
 
 .logo {
   transition: transform var(--transition-duration) cubic-bezier(0.22, 0.61, 0.36, 1);
-  -webkit-text-stroke-width: var(--text-stroke-logo);
-  -webkit-text-stroke-color: var(--with-blend-mode);
+  -webkit-text-stroke-width: var(--text-stroke-width-1);
+  -webkit-text-stroke-color: var(--color-difference);
   padding: 12px;
   color: transparent;
   font-size: 2rem;
@@ -49,27 +41,11 @@
   box-sizing: border-box;
 }
 
-.main-menu {
+.header-content nav ul {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
   position: relative;
-}
-
-.main-menu li {
-  --delay: 1.8s;
-  animation-name: main-slide-down;
-  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-  animation-fill-mode: forwards;
-  animation-duration: var(--animation-duration);
-  transform: translateY(-40px);
-}
-
-.main-menu li:nth-child(2) {
-  animation-delay: calc(var(--delay) + 0.3s);
-}
-.main-menu li:nth-child(3) {
-  animation-delay: calc(var(--delay) + 0.6s);
 }
 
 @keyframes main-slide-down {
@@ -79,33 +55,29 @@
   }
 }
 
-.main-menu a {
+.header-content nav a {
   --transition-duration: 0.3s;
   display: inline-block;
-  font-size: 1rem;
-  font-weight: 600;
-  text-transform: lowercase;
   position: relative;
-  letter-spacing: 4px;
-  color: var(--with-blend-mode);
+  color: var(--color-difference);
   padding: 16px 0;
   cursor: pointer;
   transition: transform var(--transition-duration) cubic-bezier(0.3, 1, 0.7, 1);
 }
 
-.main-menu a::after {
+.header-content nav a::after {
   content: "";
   display: block;
-  background: var(--with-blend-mode);
+  background: var(--color-difference);
   width: 8px;
   height: 8px;
   border-radius: 50%;
   position: absolute;
-  inset: 40px 42%;
+  inset: 48px 42%;
   transform: scale(0);
   transition: transform var(--transition-duration) cubic-bezier(0.3, 1, 0.7, 1);
 }
 
-.main-menu a:hover::after {
+.header-content nav a:hover::after {
   transform: scale(1);
 }

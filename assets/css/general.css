@@ -1,0 +1,79 @@
+:root {
+  --transition-duration: 0.3s;
+  --animation-duration: 0.8s;
+  --transition-easing: cubic-bezier(0.5, 0, 0.5, 1);
+  --text-stroke-width-1: 0.04rem;
+  --text-stroke-width-2: 0.05rem;
+  --font-weight-1: 300;
+  --font-weight-2: 600;
+  --font-weight-3: 700;
+  --font-weight-4: 800;
+  --font-weight-5: 900;
+
+  transition-property: background-color var(--transition-duration);
+  transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  transition-duration: 3s;
+}
+
+:root.light {
+  --font-weight-1: 600;
+  --font-weight-2: 800;
+  --font-weight-3: 900;
+  --text-stroke-width-1: 0.05rem;
+  --text-stroke-width-2: 0.09rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: var(--thumb-scroll);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+  background: var(--color-12);
+  transition: background-color var(--transition-duration) var(--transition-easing);
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (width >= 780px) {
+  * {
+    cursor: none;
+  }
+}

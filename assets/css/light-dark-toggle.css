@@ -1,8 +1,8 @@
 .light-dark-toggle {
   --animation-duration: 1.2s;
-  z-index: 6;
+  z-index: 5;
   position: fixed;
-  background-color: var(--with-blend-mode);
+  background-color: var(--color-difference);
   width: 18px;
   height: 30px;
   border-radius: 50px;
@@ -24,7 +24,8 @@
 .light-dark-toggle::after {
   content: "";
   display: inline-block;
-  background-color: var(--with-blend-mode-black);
+  background-color: var(--color-difference);
+  mix-blend-mode: difference;
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -36,7 +37,7 @@
 }
 
 .light-dark-toggle.active {
-  background: var(--with-blend-mode);
+  background: var(--color-difference);
 }
 
 .light-dark-toggle.active::after {

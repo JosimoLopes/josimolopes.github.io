@@ -1,7 +1,7 @@
 .custom-cursor {
   width: 14px;
   height: 14px;
-  background-color: #fff;
+  background-color: var(--color-difference);
   border-radius: 50%;
   position: absolute;
   mix-blend-mode: difference;
@@ -20,7 +20,7 @@
 
 .custom-cursor.active.scale {
   transform: scale(3.5);
-  background: #fff;
+  background: var(--color-difference);
 }
 
 @media (width < 780px) {
