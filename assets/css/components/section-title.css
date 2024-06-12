@@ -1,0 +1,25 @@
+.section-header {
+  margin: 0;
+  padding: 0;
+}
+
+.section-header h2 {
+  margin: 0 auto;
+  color: var(--color-00);
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+}
+
+.section-header h2::after {
+  content: "🡦";
+  display: inline-block;
+  margin-left: 8px;
+  color: var(--color-00);
+}
+
+@media (width <= 780px) {
+  .section-header {
+    display: none;
+  }
+}

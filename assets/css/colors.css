@@ -1,0 +1,21 @@
+:root {
+  --color-00: #fff;
+  --color-01: #f7f7f7;
+  --color-02: #ececec;
+  --color-04: #cdcdcd;
+  --color-05: #b6b6b6;
+  --color-06: #8f8f8f;
+  --color-07: #727272;
+  --color-08: #454545;
+  --color-09: #303030;
+  --color-10: #222222;
+  --color-11: #0f0f0f;
+  --color-12: #000;
+  --available: #21a179;
+  --color-difference: #fff;
+}
+
+:root.light {
+  --color-00: #000;
+  --color-12: #fff;
+}

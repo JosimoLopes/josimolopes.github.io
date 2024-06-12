@@ -1,0 +1,55 @@
+.font-xxl {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: calc(8rem + (20 - 8) * (100vw - 48rem) / (120 - 48));
+  line-height: 0.85;
+}
+
+.font-xl {
+  font-size: calc(6rem + (10 - 6) * (100vw - 40rem) / (120 - 40));
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.font-l {
+  font-size: calc(2.5rem + (9 - 2.5) * (100vw - 20rem) / (120 - 20));
+  font-weight: 800;
+  text-transform: uppercase;
+  -webkit-text-stroke-width: var(--text-stroke-links);
+  -webkit-text-stroke-color: var(--text-color-1);
+  line-height: 0.95;
+}
+
+.font-ml {
+  font-size: calc(1rem + (2.5 - 1) * (100vw - 40rem) / (120 - 40));
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+}
+
+.font-m {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: lowercase;
+}
+
+.font-m-2 {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-weight: var(--font-weight-1);
+}
+
+.font-m-3 {
+  font-size: calc(0.7rem + (1 - 0.7) * (100vw - 20rem) / (120 - 20));
+  font-weight: 600;
+  text-transform: uppercase;
+  font-weight: var(--font-weight-2);
+}
+
+.font-s {
+  font-weight: var(--font-weight-1);
+  letter-spacing: 1.1px;
+  font-size: calc(0.6rem + (1 - 0.6) * (100vw - 60rem) / (120 - 60));
+}

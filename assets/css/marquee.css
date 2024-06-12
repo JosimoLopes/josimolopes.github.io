@@ -3,7 +3,7 @@
   display: flex;
   overflow: hidden;
   user-select: none;
-  gap: 2rem;
+  gap: 200px;
   margin-bottom: 200px;
 }
 
@@ -13,7 +13,7 @@
   position: absolute;
   width: 90vw;
   height: 1px;
-  background: var(--text-color-1);
+  background: var(--color-00);
   bottom: 0;
   left: 5%;
   transform: scaleX(0);
@@ -23,41 +23,49 @@
   animation: line-scroll 1.5s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
 }
 
-.marquee-content {
+.marquee ul {
   display: flex;
   flex-shrink: 0;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   min-width: 100%;
-  gap: 2rem;
+  gap: 200px;
   animation: scroll 20s linear infinite;
 }
 
-.marquee:hover .marquee-content {
+.marquee:hover ul {
   animation-play-state: paused !important;
 }
 
-.marquee-content li {
-  color: var(--text-color-1);
-  font-size: calc(6rem + (10 - 6) * (100vw - 40rem) / (120 - 40));
-  font-weight: 800;
+.marquee ul li {
+  color: var(--color-00);
+  position: relative;
 }
 
-.marquee-content a {
-  color: var(--text-color-1);
-  font-size: 10rem;
-  font-size: calc(6rem + (10 - 6) * (100vw - 40rem) / (120 - 40));
-  text-transform: uppercase;
-  font-weight: 800;
+.marquee ul li::after {
+  content: "";
+  display: inline-block;
+  width: 2.8vw;
+  height: 2.8vw;
+  border-radius: 50%;
+  background: var(--color-00);
+  position: absolute;
+  top: 48%;
+  right: -124px;
+}
+
+.marquee ul a {
+  color: var(--color-00);
   cursor: pointer;
   transition-duration: var(--transition-duration);
   transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
-.marquee-content a:hover {
+.marquee ul a:hover {
   color: transparent;
-  -webkit-text-stroke-width: var(--text-stroke-links);
-  -webkit-text-stroke-color: var(--text-color-1);
+  -webkit-text-stroke-width: var(--text-stroke-width-2);
+  -webkit-text-stroke-color: var(--color-00);
 }
 
 @keyframes scroll {
@@ -65,6 +73,13 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(calc(-100% - 2rem));
+    transform: translateX(calc(-100% - 200px));
+  }
+}
+
+@media (width <= 780px) {
+  .marquee ul li::after {
+    width: 4vw;
+    height: 4vw;
   }
 }
