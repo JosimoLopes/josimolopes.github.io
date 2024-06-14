@@ -62,7 +62,7 @@
   }
 
   .header-char {
-    font-size: calc(9rem + (20 - 9) * (100vw - 25rem) / (120 - 25)) !important;
+    font-size: calc(8rem + (20 - 8) * (100vw - 30rem) / (120 - 30)) !important;
   }
 
   .header-char {
