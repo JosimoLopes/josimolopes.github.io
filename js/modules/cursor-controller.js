@@ -21,10 +21,10 @@ export default function initCursor() {
     handleCursor(x, y);
   };
 
-  function handleMouseEnter(e) {
+  const handleMouseEnter = () => {
     isHovering = true;
     cursor.classList.add("scale");
-  }
+  };
 
   const handleMouseLeave = () => {
     isHovering = false;

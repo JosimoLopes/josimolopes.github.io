@@ -3,17 +3,17 @@ export default function initLightDarkMode() {
   const root = document.querySelector(":root");
   let getMode = localStorage.getItem("mode");
 
-  function checkMode() {
+  const checkMode = () => {
     if (getMode && getMode === "light") {
       toggle.classList.add("active");
       root.classList.add("light");
     }
-  }
+  };
 
   checkMode();
 
-  function handleClick(e) {
-    this.classList.toggle("active");
+  const handleClick = (e) => {
+    e.currentTarget.classList.toggle("active");
     root.classList.toggle("light");
 
     if (!root.classList.contains("light")) {
@@ -21,7 +21,7 @@ export default function initLightDarkMode() {
     } else {
       return localStorage.setItem("mode", "light");
     }
-  }
+  };
 
   toggle.addEventListener("click", handleClick);
 }
