@@ -11,9 +11,8 @@ export default function initCursor() {
     }
   };
 
-  const handleCursorPosition = (e) => {
-    const x = e.pageX - scrollX;
-    const y = e.pageY - scrollY;
+  const handleCursorPosition = ({ pageX, pageY }) => {
+    const [x, y] = [pageX - scrollX, pageY - scrollY];
 
     cursor.style.top = y - 8 + "px";
     cursor.style.left = x - 8 + "px";
@@ -28,7 +27,6 @@ export default function initCursor() {
 
   const handleMouseLeave = () => {
     isHovering = false;
-
     cursor.classList.remove("scale");
   };
 
