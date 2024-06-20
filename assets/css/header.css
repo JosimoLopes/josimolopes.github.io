@@ -28,7 +28,7 @@
 }
 
 .logo {
-  transition: transform var(--transition-duration) cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.7, 1);
   -webkit-text-stroke-width: var(--text-stroke-width-1);
   -webkit-text-stroke-color: var(--color-difference);
   padding: 12px;
@@ -62,7 +62,7 @@
   color: var(--color-difference);
   padding: 16px 0;
   cursor: pointer;
-  transition: transform var(--transition-duration) cubic-bezier(0.3, 1, 0.7, 1);
+  transition: transform 0.5s cubic-bezier(0.3, 1, 0.7, 1);
 }
 
 .header-content nav a::after {
