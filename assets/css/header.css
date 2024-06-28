@@ -1,6 +1,6 @@
 .header {
   position: fixed;
-  inset: 0;
+  inset: 16px 0;
   z-index: 5;
   width: 100%;
   mix-blend-mode: difference;
@@ -13,7 +13,6 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 0;
   transform: translateY(-120px);
   animation: nav-slide-down var(--animation-duration) cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
   animation-delay: 1.7s;
@@ -28,10 +27,9 @@
 }
 
 .logo {
-  transition: transform 0.4s cubic-bezier(0.3, 1, 0.7, 1);
   -webkit-text-stroke-width: var(--text-stroke-width-1);
   -webkit-text-stroke-color: var(--color-difference);
-  padding: 12px;
+  padding: 16px;
   color: transparent;
   font-size: 2rem;
   font-weight: 900;
@@ -41,10 +39,16 @@
   box-sizing: border-box;
 }
 
+.logo span {
+  display: block;
+  transition: transform 0.3s cubic-bezier(0.3, 1, 0.7, 1);
+  pointer-events: none;
+  color: inherit;
+}
+
 .header-content nav ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
   position: relative;
 }
 
@@ -56,16 +60,21 @@
 }
 
 .header-content nav a {
-  --transition-duration: 0.3s;
   display: inline-block;
   position: relative;
   color: var(--color-difference);
-  padding: 16px 0;
+  padding: 1rem;
   cursor: pointer;
-  transition: transform 0.5s cubic-bezier(0.3, 1, 0.7, 1);
 }
 
-.header-content nav a::after {
+.header-content nav span {
+  display: block;
+  transition: transform 0.3s cubic-bezier(0.3, 1, 0.7, 1);
+  pointer-events: none;
+  color: inherit;
+}
+
+.header-content nav span::after {
   content: "";
   display: block;
   background: var(--color-difference);
@@ -73,11 +82,12 @@
   height: 8px;
   border-radius: 50%;
   position: absolute;
-  inset: 48px 42%;
+  left: 45%;
+  top: 40px;
   transform: scale(0);
   transition: transform var(--transition-duration) cubic-bezier(0.3, 1, 0.7, 1);
 }
 
-.header-content nav a:hover::after {
+.header-content nav a:hover span::after {
   transform: scale(1);
 }

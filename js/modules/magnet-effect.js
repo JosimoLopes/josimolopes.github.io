@@ -1,26 +1,31 @@
 export default function initMagnetEffect() {
-  const magnetTargets = document.querySelectorAll('[data-magnet="target"]');
+  const elBox = document.querySelectorAll('[data-magnet="box"]');
 
-  const handleMouseMove = ({ offsetX, offsetY, currentTarget }) => {
-    const [move, x, y] = [20, offsetX, offsetY];
-    const [targetHeight, targetWidth] = [currentTarget.offsetWidth, currentTarget.offsetHeight];
-    const [transX, transY] = [(x / targetWidth) * move, (y / targetHeight) * move];
+  const handleMouseMove = (e) => {
+    const elTarget = e.currentTarget.querySelector("span");
+    const { offsetX: x, offsetY: y } = e;
+    const { offsetWidth: width, offsetHeight: height } = e.currentTarget;
+
+    const move = 20;
+    const xMove = (x / width) * (move * 2) - move;
+    const yMove = (y / height) * (move * 2) - move;
+
+    handleMouseOut.elTarget = elTarget;
 
     if (window.innerWidth >= 780) {
-      currentTarget.style.transform = `translateX(${transX}px) translateY(${transY}px)`;
+      elTarget.style.transform = `translate(${xMove}px, ${yMove}px)`;
     }
   };
 
-  const resetIconPosition = (el) => {
-    el.style.transform = "";
+  const handleMouseOut = {
+    elTarget: "",
+    handleEvent() {
+      this.elTarget.style.transform = "";
+    },
   };
 
-  const handleMouseOut = ({ currentTarget }) => {
-    resetIconPosition(currentTarget);
-  };
-
-  magnetTargets.forEach((t) => {
-    t.addEventListener("mousemove", handleMouseMove);
-    t.addEventListener("mouseout", handleMouseOut);
+  elBox.forEach((el) => {
+    el.addEventListener("mousemove", handleMouseMove);
+    el.addEventListener("mouseout", handleMouseOut);
   });
 }

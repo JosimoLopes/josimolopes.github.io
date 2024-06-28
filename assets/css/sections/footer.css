@@ -29,7 +29,6 @@
   bottom: 40px;
   left: 4.6%;
   mix-blend-mode: difference;
-  gap: 8px;
   z-index: 5;
   animation-name: footer-slide-up;
   animation-duration: var(--animation-duration);
@@ -69,10 +68,15 @@
   display: block;
   color: var(--color-difference);
   cursor: pointer;
-  transition: transform 0.5s cubic-bezier(0.3, 1, 0.7, 1);
-  padding: 8px 0;
-  /* border: 1px solid greenyellow; */
   max-width: fit-content;
+  padding: 0.8rem;
+}
+
+.footer > ul a span {
+  display: block;
+  transition: transform 0.3s cubic-bezier(0.3, 1, 0.7, 1);
+  pointer-events: none;
+  color: inherit;
 }
 
 .footer > a {
