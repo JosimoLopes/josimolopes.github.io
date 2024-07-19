@@ -20,14 +20,19 @@ export default function initCursor() {
     handleCursor(x, y);
   };
 
-  const handleMouseEnter = () => {
+  const handleMouseEnter = ({ currentTarget }) => {
     isHovering = true;
-    cursor.classList.add("scale");
+
+    if (currentTarget.classList.contains("logo")) {
+      cursor.classList.add("scale2");
+    } else {
+      cursor.classList.add("scale");
+    }
   };
 
   const handleMouseLeave = () => {
     isHovering = false;
-    cursor.classList.remove("scale");
+    cursor.classList.remove("scale", "scale2");
   };
 
   window.addEventListener("mousemove", handleCursorPosition);

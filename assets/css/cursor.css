@@ -23,6 +23,11 @@
   background: var(--color-difference);
 }
 
+.custom-cursor.active.scale2 {
+  transform: scale(6);
+  background: var(--color-difference);
+}
+
 @media (width < 780px) {
   .custom-cursor.active {
     display: none;
