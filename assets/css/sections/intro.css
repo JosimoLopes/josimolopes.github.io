@@ -23,15 +23,7 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  animation: line-slid-up 0.3s linear forwards;
-  animation-timeline: scroll();
 }
-
-/* @keyframes line-slid-up {
-  to {
-    transform: translateY(500px);
-  }
-} */
 
 .header-char {
   --stager: 0.1s;
