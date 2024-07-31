@@ -19,5 +19,8 @@
     "globals": "^15.8.0",
     "webpack": "^5.93.0",
     "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "lenis": "^1.1.9"
   }
 }

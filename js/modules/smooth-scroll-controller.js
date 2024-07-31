@@ -1,10 +1,12 @@
-// export default function initLenisSmoothScroll() {
-//   const lenis = new Lenis();
+import Lenis from "lenis";
 
-//   function raf(time) {
-//     lenis.raf(time);
-//     requestAnimationFrame(raf);
-//   }
+export default function initLenisSmoothScroll() {
+  const lenis = new Lenis();
 
-//   requestAnimationFrame(raf);
-// }
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+}
