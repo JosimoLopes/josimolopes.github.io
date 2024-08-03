@@ -1,44 +1,53 @@
-export default function initCursor() {
-  const cursor = document.querySelector('[data-cursor="custom"]');
-  const elementsHover = document.querySelectorAll("[data-hover]");
-  let isHovering = false;
+export default class CursorController {
+  constructor(cursor, hoverElements) {
+    this.cursor = document.querySelector(cursor);
+    this.hoverElements = document.querySelectorAll(hoverElements);
+    this.classActive = "active";
 
-  const handleCursor = (x, y) => {
-    if ((x && y) || isHovering) {
-      cursor.classList.add("active");
-    } else {
-      cursor.classList.remove("active");
-    }
-  };
+    this.handleCursorPosition = this.handleCursorPosition.bind(this);
+    this.handleMouseEnter = this.handleMouseEnter.bind(this);
+    this.handleMouseLeave = this.handleMouseLeave.bind(this);
+  }
 
-  const handleCursorPosition = ({ pageX, pageY }) => {
+  activeCursor(x, y) {
+    if (x && y) this.cursor.classList.add(this.classActive);
+  }
+
+  handleCursorPosition({ pageX, pageY }) {
     const [x, y] = [pageX - scrollX, pageY - scrollY];
 
-    cursor.style.top = y - 8 + "px";
-    cursor.style.left = x - 8 + "px";
+    this.cursor.style.top = y - 8 + "px";
+    this.cursor.style.left = x - 8 + "px";
 
-    handleCursor(x, y);
-  };
+    this.activeCursor(x, y);
+  }
 
-  const handleMouseEnter = ({ currentTarget }) => {
-    isHovering = true;
-
+  handleMouseEnter({ currentTarget }) {
     if (currentTarget.classList.contains("logo")) {
-      cursor.classList.add("scale2");
+      this.cursor.classList.add("scaleLogo");
     } else {
-      cursor.classList.add("scale");
+      this.cursor.classList.add("scale");
     }
-  };
+  }
 
-  const handleMouseLeave = () => {
-    isHovering = false;
-    cursor.classList.remove("scale", "scale2");
-  };
+  handleMouseLeave() {
+    this.cursor.classList.remove("scale", "scaleLogo");
+  }
 
-  window.addEventListener("mousemove", handleCursorPosition);
+  addCursorEvent() {
+    window.addEventListener("mousemove", this.handleCursorPosition);
 
-  elementsHover.forEach((el) => {
-    el.addEventListener("mouseenter", handleMouseEnter);
-    el.addEventListener("mouseleave", handleMouseLeave);
-  });
+    this.hoverElements.forEach((el) => {
+      el.addEventListener("mouseenter", this.handleMouseEnter);
+      el.addEventListener("mouseleave", this.handleMouseLeave);
+    });
+  }
+
+  init() {
+    if ((this.cursor, this.hoverElements)) {
+      this.addCursorEvent();
+    }
+
+    return this;
+  }
 }
