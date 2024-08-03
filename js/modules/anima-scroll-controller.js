@@ -1,19 +1,37 @@
-export default function initAnimaScroll() {
-  const workElements = document.querySelectorAll('[data-anima="line"]');
+export default class AnimaScroll {
+  constructor(lines) {
+    this.lines = document.querySelectorAll(lines);
+    this.activeClass = "active-line";
 
-  const addActive = () => {
-    workElements.forEach((el) => {
-      const elementTop = el.getBoundingClientRect().top - 600;
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+
+  addActiveClass = () => {
+    this.lines.forEach((el) => {
+      const elementTop = el.getBoundingClientRect().top - 500;
+
       if (elementTop < 0) {
-        el.classList.add("active-line");
+        el.classList.add(this.activeClass);
+      } else {
+        el.classList.remove(this.activeClass);
       }
     });
   };
 
-  const handleScroll = () => {
-    addActive();
-  };
+  handleScroll() {
+    this.addActiveClass();
+  }
 
-  window.addEventListener("scroll", handleScroll);
-  addActive();
+  addScrollEvent() {
+    window.addEventListener("scroll", this.handleScroll);
+    this.addActiveClass();
+  }
+
+  init() {
+    if (this.lines.length) {
+      this.addScrollEvent();
+    }
+
+    return this;
+  }
 }
