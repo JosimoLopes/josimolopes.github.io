@@ -1,9 +1,21 @@
-export default function initObfuscation() {
-  const emailElementsMarquee = document.querySelectorAll("[data-mail]");
+export default class EmailObfuscation {
+  constructor(emails, user, domain) {
+    this.emails = document.querySelectorAll(emails);
+    this.user = user;
+    this.domain = domain;
+  }
 
-  const [user, domain] = ["joe.lopes", "outlook.com"];
+  obfuscate() {
+    this.emails.forEach((el) => {
+      el.setAttribute("href", `mailto:${this.user}@${this.domain}`);
+    });
+  }
 
-  emailElementsMarquee.forEach((el) => {
-    el.setAttribute("href", `mailto:${user}@${domain}`);
-  });
+  init() {
+    if (this.emails.length) {
+      this.obfuscate();
+    }
+
+    return this;
+  }
 }
