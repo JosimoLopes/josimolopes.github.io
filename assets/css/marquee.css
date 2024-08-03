@@ -17,10 +17,11 @@
   bottom: 0;
   left: 5%;
   transform: scaleX(0);
+  transition: transform 1.5s;
 }
 
 .marquee.active-line::after {
-  animation: line-scroll 1.5s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+  transform: scaleX(1);
 }
 
 .marquee ul {
