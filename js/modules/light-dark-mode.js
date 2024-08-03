@@ -1,27 +1,43 @@
-export default function initLightDarkMode() {
-  const toggle = document.querySelector('[data-toggle="light-dark"]');
-  const root = document.querySelector(":root");
-  let getMode = localStorage.getItem("mode");
+export default class LightDarkMode {
+  constructor(toggle, documentRoot) {
+    this.toggle = document.querySelector(toggle);
+    this.documentRoot = document.querySelector(documentRoot);
+    this.getMode = localStorage.getItem("mode");
+    this.activeClass = "active";
+    this.darkMode = "dark";
+    this.lightMode = "light";
 
-  const checkMode = () => {
-    if (getMode && getMode === "light") {
-      toggle.classList.add("active");
-      root.classList.add("light");
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  checkMode() {
+    if (this.getMode === this.lightMode) {
+      this.toggle.classList.add(this.activeClass);
+      this.documentRoot.classList.add(this.lightMode);
     }
-  };
+  }
 
-  checkMode();
+  handleClick({ currentTarget }) {
+    currentTarget.classList.toggle(this.activeClass);
+    this.documentRoot.classList.toggle(this.lightMode);
 
-  const handleClick = (e) => {
-    e.currentTarget.classList.toggle("active");
-    root.classList.toggle("light");
-
-    if (!root.classList.contains("light")) {
+    if (!this.documentRoot.classList.contains(this.lightMode)) {
       return localStorage.setItem("mode", "dark");
     } else {
       return localStorage.setItem("mode", "light");
     }
-  };
+  }
 
-  toggle.addEventListener("click", handleClick);
+  addToggleEvent() {
+    this.toggle.addEventListener("click", this.handleClick);
+  }
+
+  init() {
+    if (this.toggle && this.documentRoot) {
+      this.checkMode();
+      this.addToggleEvent();
+    }
+
+    return this;
+  }
 }
