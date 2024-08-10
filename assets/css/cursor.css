@@ -1,6 +1,6 @@
 .custom-cursor {
-  width: 14px;
-  height: 14px;
+  width: 10px;
+  height: 10px;
   background-color: var(--color-difference);
   border-radius: 50%;
   position: absolute;
@@ -9,7 +9,6 @@
   opacity: 0;
   z-index: 10;
   transition: transform 0.7s ease;
-  /* transform: scale(0); */
 }
 
 .custom-cursor.active {
@@ -21,15 +20,16 @@
 
 .custom-cursor.active.scale {
   transform: scale(3.5);
+  transform-origin: center;
   background: var(--color-difference);
 }
 
 .custom-cursor.active.scaleLogo {
-  transform: scale(6);
+  transform: scale(8);
   background: var(--color-difference);
 }
 
-@media (width < 780px) {
+@media (width <= 780px) {
   .custom-cursor.active {
     display: none;
   }

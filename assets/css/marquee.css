@@ -44,18 +44,6 @@
   position: relative;
 }
 
-.marquee ul li::after {
-  content: "";
-  display: inline-block;
-  width: 2.8vw;
-  height: 2.8vw;
-  border-radius: 50%;
-  background: var(--color-00);
-  position: absolute;
-  top: 40%;
-  right: -124px;
-}
-
 .marquee ul a {
   color: var(--color-00);
   cursor: pointer;

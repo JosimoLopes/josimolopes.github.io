@@ -14,10 +14,15 @@ export default class CursorController {
   }
 
   handleCursorPosition({ pageX, pageY }) {
-    const [x, y] = [pageX - scrollX, pageY - scrollY];
+    let [x, y] = [pageX - scrollX, pageY - scrollY];
 
-    this.cursor.style.top = y - 8 + "px";
-    this.cursor.style.left = x - 8 + "px";
+    if (this.cursor.classList.contains("scale")) {
+      x -= 6;
+      y -= 6;
+    }
+
+    this.cursor.style.top = `${y}px`;
+    this.cursor.style.left = `${x}px`;
 
     this.activeCursor(x, y);
   }
