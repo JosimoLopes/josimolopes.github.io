@@ -13,10 +13,6 @@
 }
 
 .about-desc {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 40px;
   position: relative;
   padding-top: 8px;
 }
@@ -46,6 +42,7 @@
 .about-text {
   color: var(--color-00);
   align-self: center;
+  text-wrap: balance;
 }
 
 @media (width < 780px) {
@@ -58,13 +55,5 @@
 
   .about-content {
     grid-template-columns: 1fr;
-  }
-
-  .about-desc {
-    grid-template-columns: 1fr;
-  }
-
-  .about img {
-    display: none;
   }
 }
