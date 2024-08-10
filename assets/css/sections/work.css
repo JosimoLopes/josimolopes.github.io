@@ -89,15 +89,17 @@
     grid-template-columns: 1fr;
   }
 
-  .work p {
-    display: none;
-  }
-
   .section-grid {
     grid-template-columns: auto;
   }
 
   .section-title-wrapper {
+    display: none;
+  }
+}
+
+@media (width < 580px) {
+  .work p {
     display: none;
   }
 }

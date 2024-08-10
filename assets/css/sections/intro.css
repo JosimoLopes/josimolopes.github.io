@@ -52,8 +52,8 @@
     grid-template-rows: auto;
   }
 
-  .header-char {
-    font-size: calc(8rem + (20 - 8) * (100vw - 30rem) / (120 - 30)) !important;
+  .header-line:nth-child(1) {
+    display: none;
   }
 
   .header-char {
