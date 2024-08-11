@@ -1,6 +1,6 @@
 .header {
   position: fixed;
-  inset: 16px 0;
+  inset: 0;
   z-index: 5;
   width: 100%;
   mix-blend-mode: difference;
@@ -10,13 +10,11 @@
 .header-content {
   --animation-duration: 1.2s;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   transform: translateY(-120px);
   animation: nav-slide-down var(--animation-duration) cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
   animation-delay: 1.7s;
-  opacity: 0;
 }
 
 @keyframes nav-slide-down {
@@ -27,23 +25,32 @@
 }
 
 .logo {
-  -webkit-text-stroke-width: var(--text-stroke-width-1);
-  -webkit-text-stroke-color: var(--color-difference);
   padding: 16px;
-  color: transparent;
-  font-size: 2rem;
-  font-weight: 900;
-  line-height: 1.1rem;
-  letter-spacing: -0.1rem;
+  color: var(--color-difference);
+  font-size: clamp(0.8rem, 1.5cqi, 1.5rem);
+  font-weight: 500;
   cursor: pointer;
-  box-sizing: border-box;
+  width: fit-content;
 }
 
-.logo span {
-  display: block;
+.logo > span {
+  display: flex;
   transition: transform 0.3s cubic-bezier(0.3, 1, 0.7, 1);
   pointer-events: none;
   color: inherit;
+  text-wrap: nowrap;
+}
+
+.logo .hide__logo {
+  display: inline-block;
+  transition: 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  overflow: hidden;
+  max-width: 0;
+}
+
+.logo:hover .hide__logo {
+  max-width: 100%;
+  opacity: 1;
 }
 
 .header-content nav ul {

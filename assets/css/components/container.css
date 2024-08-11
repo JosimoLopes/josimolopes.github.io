@@ -1,11 +1,9 @@
 .container {
-  max-width: 90vw;
-  box-sizing: border-box;
+  max-width: 90%;
   margin: 0 auto;
 }
 
-.container-h {
-  max-width: 92vw;
-  box-sizing: border-box;
+.container__header {
+  max-width: 93%;
   margin: 0 auto;
 }

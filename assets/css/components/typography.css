@@ -1,7 +1,7 @@
 .font-xxl {
   text-transform: uppercase;
   font-weight: 600;
-  font-size: clamp(6rem, 16.5cqi, 14.3rem);
+  font-size: clamp(2.5rem, 16.5cqi, 14.3rem);
   line-height: 0.85;
 }
 
@@ -12,7 +12,7 @@
 }
 
 .font-l {
-  font-size: clamp(4rem, 8cqi, 9rem);
+  font-size: clamp(2.5rem, 8cqi, 9rem);
   font-weight: 800;
   text-transform: uppercase;
   -webkit-text-stroke-width: var(--text-stroke-links);
@@ -29,7 +29,7 @@
 
 .font-m {
   font-size: clamp(0.75rem, 1.25cqi, 0.85rem);
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 1.2px;
   text-transform: lowercase;
 }

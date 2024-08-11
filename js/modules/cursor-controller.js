@@ -27,12 +27,8 @@ export default class CursorController {
     this.activeCursor(x, y);
   }
 
-  handleMouseEnter({ currentTarget }) {
-    if (currentTarget.classList.contains("logo")) {
-      this.cursor.classList.add("scaleLogo");
-    } else {
-      this.cursor.classList.add("scale");
-    }
+  handleMouseEnter() {
+    this.cursor.classList.add("scale");
   }
 
   handleMouseLeave() {
