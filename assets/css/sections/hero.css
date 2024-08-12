@@ -11,7 +11,6 @@
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  border: 1px solid red;
 }
 
 .hero__title__header {
@@ -21,13 +20,24 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
+  animation: slide__up 5s cubic-bezier(0.14, 0, 0.035, 1) forwards;
   /* border: 1px solid red; */
 }
 
+@keyframes slide__up {
+  from {
+    transform: translate3d(0, 15vh, 0);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
 .hero__title__char {
-  --stager: 0.25s;
+  --stager: 0.15s;
   --animation-delay: 0.5s;
-  --animation-duration: 1s;
+  --animation-duration: 1.5s;
   display: flex;
   color: var(--color-00);
   user-select: none;
