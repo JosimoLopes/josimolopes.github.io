@@ -35,71 +35,60 @@
     </div>
   </header>
 
-  <main class="intro" id="intro" data-section>
-    <div class="intro-content">
-      <div class="header-wrapper">
-        <div class="header-line" aria-label="Front-End">
-          <div class="header-char font-xxl" style="--i: 0">F</div>
-          <div class="header-char font-xxl" style="--i: 1">r</div>
-          <div class="header-char font-xxl" style="--i: 2">o</div>
-          <div class="header-char font-xxl" style="--i: 3">n</div>
-          <div class="header-char font-xxl" style="--i: 4">t</div>
-          <div class="header-char font-xxl" style="--i: 5">-</div>
-          <div class="header-char font-xxl" style="--i: 6">E</div>
-          <div class="header-char font-xxl" style="--i: 7">n</div>
-          <div class="header-char font-xxl" style="--i: 8">d</div>
-        </div>
-        <div class="header-line" aria-label="Developer">
-          <div class="header-char font-xxl" style="--i: 0">D</div>
-          <div class="header-char font-xxl" style="--i: 1">e</div>
-          <div class="header-char font-xxl" style="--i: 2">v</div>
-          <div class="header-char font-xxl" style="--i: 3">e</div>
-          <div class="header-char font-xxl" style="--i: 4">l</div>
-          <div class="header-char font-xxl" style="--i: 5">o</div>
-          <div class="header-char font-xxl" style="--i: 6">p</div>
-          <div class="header-char font-xxl" style="--i: 7">e</div>
-          <div class="header-char font-xxl" style="--i: 8">r</div>
+  <main>
+    <section id="hero" data-section>
+      <div class="hero__container">
+        <div class="hero__title__header">
+          <div class="hero__title__char font-xxl" style="--i: 0">B</div>
+          <div class="hero__title__char font-xxl" style="--i: 1">Y</div>
+          <div class="hero__title__char font-xxl" style="--i: 2">J</div>
+          <div class="hero__title__char font-xxl" style="--i: 3">S</div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <section class="about" id="about" aria-label="About" data-section>
+      <div class="about-content container">
+        <div class="section-header">
+          <h2 class="font-m-3">About Me</h2>
+        </div>
+        <div class="about-desc" data-anima="line">
+          <!-- <img src="/assets/images/josimo.webp" alt="" width="400" /> -->
+          <p class="about-text font-ml">Hi, I'm Josimo Lopes, a passionate front-end developer with a knack for crafting beautiful and intuitive web experiences. I bring a creative eye to UI and digital product design, ensuring every element is both visually stunning and thoughtfully implemented.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="work" id="work" aria-label="Work" data-section>
+      <div class="work-content container">
+        <div class="section-header">
+          <h2 class="font-m-3">Work</h2>
+        </div>
+        <ul>
+          <li data-anima="line">
+            <span class="font-s">01</span>
+            <p class="font-s">Front-End Development/UI Design</p>
+            <a href="https://coopfass.com/" target="_blank" class="work-link font-l" data-hover><span>Coopfass</span></a>
+          </li>
+          <li class="work-container" data-anima="line">
+            <span class="font-s">03</span>
+            <p class="font-s">Front-End Development</p>
+            <a href="https://bikcraft-gmg40x1h8-josimolopes-projects.vercel.app/" target="_blank" class="work-link font-l" data-hover><span>Bikcraft</span></a>
+          </li>
+          <li class="work-container" data-anima="line">
+            <span class="font-s">03</span>
+            <p class="font-s">Front-End Development</p>
+            <a href="https://animals-alpha-indol.vercel.app/" target="_blank" class="work-link font-l" data-hover><span>Animals</span></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+
   </main>
 
-  <section class="work" id="work" aria-label="Work" data-section>
-    <div class="work-content container">
-      <div class="section-header">
-        <h2 class="font-m-3">Work</h2>
-      </div>
-      <ul>
-        <li data-anima="line">
-          <span class="font-s">01</span>
-          <p class="font-s">Front-End Development/UI Design</p>
-          <a href="https://coopfass.com/" target="_blank" class="work-link font-l" data-hover><span>Coopfass</span></a>
-        </li>
-        <li class="work-container" data-anima="line">
-          <span class="font-s">03</span>
-          <p class="font-s">Front-End Development</p>
-          <a href="https://bikcraft-gmg40x1h8-josimolopes-projects.vercel.app/" target="_blank" class="work-link font-l" data-hover><span>Bikcraft</span></a>
-        </li>
-        <li class="work-container" data-anima="line">
-          <span class="font-s">03</span>
-          <p class="font-s">Front-End Development</p>
-          <a href="https://animals-alpha-indol.vercel.app/" target="_blank" class="work-link font-l" data-hover><span>Animals</span></a>
-        </li>
-      </ul>
-    </div>
-  </section>
 
-  <section class="about" id="about" aria-label="About" data-section>
-    <div class="about-content container">
-      <div class="section-header">
-        <h2 class="font-m-3">About Me</h2>
-      </div>
-      <div class="about-desc" data-anima="line">
-        <!-- <img src="/assets/images/josimo.webp" alt="" width="400" /> -->
-        <p class="about-text font-ml">A passionate front-end developer with a knack for crafting beautiful and intuitive web experiences. I bring a creative eye to UI and digital product design, ensuring every element is both visually stunning and thoughtfully implemented.</p>
-      </div>
-    </div>
-  </section>
 
   <footer class="footer" id="contact" data-section>
     <p class="got-question font-m-2">Got a question, have a proposal to discuss, or want to collaborate? Reach out!</p>
