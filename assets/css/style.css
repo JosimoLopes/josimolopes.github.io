@@ -10,7 +10,7 @@
 @import url(/assets/css/sections/work.css);
 @import url(/assets/css/sections/about.css);
 @import url(/assets/css/sections/footer.css);
-@import url(/assets/css/sections/intro.css);
+@import url(/assets/css/sections/hero.css);
 
 /* Components */
 @import url(./components/container.css);

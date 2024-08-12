@@ -1,36 +1,43 @@
-.intro {
+#hero {
   height: 100%;
   width: 100%;
   display: flex;
 }
 
-.intro-content {
+.hero__container {
   display: flex;
   position: relative;
-  align-items: end;
+  align-items: center;
   justify-content: center;
   width: 100vw;
   height: 100vh;
 }
 
-.header-wrapper {
-  grid-row: 2;
-  height: fit-content;
-}
-
-.header-line {
+.hero__title__header {
   display: flex;
   flex-wrap: wrap;
   max-height: max-content;
   margin: 0;
   padding: 0;
   overflow: hidden;
+  animation: slide__up 5s cubic-bezier(0.14, 0, 0.035, 1) forwards;
+  /* border: 1px solid red; */
 }
 
-.header-char {
-  --stager: 0.1s;
+@keyframes slide__up {
+  from {
+    transform: translate3d(0, 15vh, 0);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+.hero__title__char {
+  --stager: 0.15s;
   --animation-delay: 0.5s;
-  --animation-duration: 1s;
+  --animation-duration: 1.5s;
   display: flex;
   color: var(--color-00);
   user-select: none;
