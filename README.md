@@ -9,4 +9,4 @@ Rich JavaScript Functionality: Incorporating various interactive elements and dy
 CSS Animations: Bringing the page to life with engaging and sophisticated animations.
 Explore my work and see how I blend creativity with technical skills!
 
-You can chack it out here: [josimolopes.me](https://josimolopes.me).
+You can chack it out here: [josimolopes](https://josimolopes.github.io).
